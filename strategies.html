@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nine Practical Strategies · Assessment Design in the Age of AI · ASU</title>
+<meta name="description" content="The full nine practical strategies for course and assessment design in the age of AI, with why each works, how to actually do it, and where to look. From the ASU Office of the Provost and EdPlus." />
+<style>
+  :root{
+    --maroon:#8C1D40;--maroon-deep:#6E1732;--gold:#FFC627;--ink:#231F20;--gray:#747474;
+    --line:#E5E1E3;--bg:#FFFFFF;--bg-soft:#FAF7F3;--bg-maroon-tint:#F7EEF1;
+    --shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(140,29,64,.06);
+    --shadow-lg:0 12px 40px rgba(140,29,64,.14);--radius:14px;--maxw:900px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Neue Haas Grotesk',Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.62;-webkit-font-smoothing:antialiased;font-size:17px;}
+  em,i,cite{font-style:normal;font-weight:700;}
+  a{color:var(--maroon);text-decoration:none;}
+  a:hover{color:var(--maroon-deep);text-decoration:underline;}
+  h1,h2,h3,h4{line-height:1.18;color:var(--maroon);font-weight:800;letter-spacing:-.01em;margin:0 0 .5em;}
+  h2{font-size:clamp(1.5rem,3vw,2.1rem);}
+  h3{font-size:1.35rem;}
+  h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--maroon);margin:0 0 .5em;}
+  p{margin:0 0 1.05em;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .wide{max-width:1120px;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:800;color:var(--maroon);margin:0 0 .8rem;}
+  .gold-rule{height:4px;width:64px;background:var(--gold);border-radius:3px;margin:0 0 1.4rem;}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:var(--maroon);border-bottom:3px solid var(--gold);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px;max-width:1120px;margin:0 auto;padding:0 24px;}
+  .brand-lockup{display:flex;flex-direction:column;line-height:1.15;}
+  .brand-lockup a{text-decoration:none;}
+  .brand-lockup .asu{color:#fff;font-weight:800;font-size:1.02rem;}
+  .brand-lockup .unit{color:var(--gold);font-weight:700;font-size:.8rem;}
+  .nav .back{color:#fff;font-weight:700;font-size:.92rem;display:flex;align-items:center;gap:8px;}
+  .nav .back:hover{color:var(--gold);text-decoration:none;}
+
+  /* Hero band */
+  .band{background:radial-gradient(1000px 420px at 88% -20%,rgba(255,198,39,.16),transparent 60%),linear-gradient(160deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;padding:56px 0 60px;}
+  .band .eyebrow{color:var(--gold);}
+  .band h1{color:#fff;font-size:clamp(2rem,4.5vw,3rem);max-width:20ch;margin-bottom:.3em;}
+  .band p{color:#F3E7EB;font-size:1.12rem;max-width:60ch;margin:0;}
+
+  /* TOC */
+  .toc{background:var(--bg-soft);border-bottom:1px solid var(--line);padding:26px 0;}
+  .toc .wide{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+  .toc .lab{font-weight:800;color:var(--maroon);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-right:6px;}
+  .toc a{background:#fff;border:1px solid var(--line);border-radius:100px;padding:7px 14px;font-size:.86rem;font-weight:600;color:var(--ink);}
+  .toc a:hover{border-color:var(--maroon);color:var(--maroon);text-decoration:none;}
+
+  section{padding:56px 0;}
+  section.soft{background:var(--bg-soft);}
+
+  /* Framework blocks */
+  .fw{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:26px;}
+  .fw .tag{display:inline-block;background:var(--bg-maroon-tint);color:var(--maroon);font-weight:800;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:6px;margin-bottom:12px;}
+  .fw h3{color:var(--maroon);}
+  ul.plain{list-style:none;padding:0;margin:0 0 1em;}
+  ul.plain li{padding:8px 0 8px 24px;position:relative;}
+  ul.plain li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;border-radius:2px;background:var(--gold);}
+  ul.plain li b{color:var(--maroon);}
+  .design-sentence{background:#231F20;color:#fff;border-radius:var(--radius);padding:24px 28px;margin-top:6px;}
+  .design-sentence p{margin:0;font-size:1.1rem;font-weight:600;}
+  .design-sentence .br{color:var(--gold);font-weight:800;}
+
+  /* Strategy cards */
+  .strategy{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 36px;margin-bottom:26px;scroll-margin-top:90px;border-left:6px solid var(--gold);}
+  .strategy .shead{display:flex;align-items:flex-start;gap:18px;margin-bottom:6px;}
+  .strategy .num{flex:none;font-size:1.15rem;font-weight:800;color:#fff;background:var(--maroon);width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+  .strategy .shead h3{margin:0;padding-top:4px;color:var(--ink);font-size:1.4rem;}
+  .clabel{display:inline-block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:6px;margin:2px 0 18px 64px;}
+  .block h4{margin-top:22px;}
+  .block h4.why{color:var(--maroon);}
+  .block h4.how{color:#8a5a20;}
+  .block h4.look{color:#5a4a4f;}
+  .how-list{margin:0 0 .4em;padding-left:20px;}
+  .how-list li{margin:6px 0;}
+  .look-list{list-style:none;padding:0;margin:0;}
+  .look-list li{padding:7px 0 7px 22px;position:relative;border-top:1px solid var(--line);font-size:.95rem;}
+  .look-list li:first-child{border-top:none;}
+  .look-list li::before{content:"\2192";position:absolute;left:0;top:7px;color:var(--gold);font-weight:800;}
+  .backtop{font-size:.82rem;font-weight:700;margin-top:16px;display:inline-block;}
+
+  /* Source callout */
+  .source-note{background:var(--bg-maroon-tint);border:1px solid #E7CBD6;border-radius:var(--radius);padding:22px 26px;font-size:.95rem;}
+  .source-note b{color:var(--maroon);}
+
+  /* CTA band */
+  .cta-band{background:var(--maroon);color:#fff;text-align:center;padding:56px 0;}
+  .cta-band h2{color:#fff;}
+  .cta-band p{color:#F3E7EB;max-width:52ch;margin:0 auto 1.5em;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:1rem;padding:14px 26px;border-radius:10px;border:2px solid transparent;cursor:pointer;transition:.15s;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-gold:hover{background:#ffd451;color:#000;text-decoration:none;transform:translateY(-1px);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;}
+  .cta-band .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+  footer.site{background:var(--maroon-deep);color:#EBD3DB;padding:40px 0;font-size:.85rem;}
+  footer.site .asu{color:#fff;font-weight:800;}
+  footer.site a{color:var(--gold);}
+
+  @media(max-width:600px){
+    body{font-size:16px;}
+    .strategy{padding:26px 22px;}
+    .clabel{margin-left:0;}
+    .nav .brand-lockup .unit{display:none;}
+    section{padding:44px 0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<a id="top"></a>
+<header class="site">
+  <div class="nav">
+    <div class="brand-lockup">
+      <a href="index.html">
+        <span class="asu">Arizona State University</span>
+        <span class="unit">Office of the Provost + EdPlus</span>
+      </a>
+    </div>
+    <a class="back" href="index.html">&larr; Back to overview</a>
+  </div>
+</header>
+
+<!-- Hero band -->
+<div class="band">
+  <div class="wrap wide">
+    <p class="eyebrow">The full resource</p>
+    <h1>Nine practical strategies for assessment design in the age of AI</h1>
+    <p>Each strategy comes from real faculty who have published protocols, materials, or working models you can adapt for your course. You do not need all nine. One move from a few different clusters often produces the largest change with the least redesign effort.</p>
+  </div>
+</div>
+
+<!-- TOC -->
+<nav class="toc">
+  <div class="wrap wide">
+    <span class="lab">Jump to</span>
+    <a href="#frameworks">Frameworks</a>
+    <a href="#s1">1. Per-assignment AI policy</a>
+    <a href="#s2">2. Student intros</a>
+    <a href="#s3">3. Interaction per module</a>
+    <a href="#s4">4. Micro-orals</a>
+    <a href="#s5">5. Local context</a>
+    <a href="#s6">6. Prior work</a>
+    <a href="#s7">7. Process &amp; feedback</a>
+    <a href="#s8">8. Real audience</a>
+    <a href="#s9">9. Assurance moment</a>
+  </div>
+</nav>
+
+<!-- Frameworks -->
+<section id="frameworks">
+  <div class="wrap">
+    <p class="eyebrow">Two foundational frameworks</p>
+    <div class="gold-rule"></div>
+    <h2>The frameworks that anchor these strategies</h2>
+    <p>The strategies fit into two composable frameworks that come from established faculty practice. Neither is required for adopting any single strategy, but holding both in mind sharpens decisions about where to invest redesign effort.</p>
+
+    <div class="fw">
+      <span class="tag">TILT</span>
+      <h3>Transparency in Learning and Teaching</h3>
+      <p>Developed by Mary-Ann Winkelmes beginning in 2009. Its premise: most assignment failures are failures of student-facing clarity, not student capability. TILT asks faculty to make three things explicit on every assignment:</p>
+      <ul class="plain">
+        <li><b>Purpose.</b> Why this assignment? What course outcomes does it serve, and what skill or knowledge does it build that students will use beyond the course?</li>
+        <li><b>Task.</b> What specifically to do, in what steps, in what format. Process is named, not assumed.</li>
+        <li><b>Criteria.</b> What success looks like. A rubric or checklist with examples of more and less successful work.</li>
+      </ul>
+      <p>More than 15 years of IRB-approved, multi-institutional research documents that TILT-redesigned assignments produce measurable gains in academic confidence, sense of belonging, and skill mastery, with particular benefit for first-generation and underrepresented students. It closes equity gaps without lowering rigor. TILT clarity is the precondition for everything else: Torrey Trust&rsquo;s question, <b>&ldquo;AI can do this. Why am I asking them to do this?&rdquo;</b> is the TILT Purpose question in another form.</p>
+      <h4 class="look">Where to look</h4>
+      <ul class="look-list">
+        <li><a href="https://www.tilthighered.com/resources" target="_blank" rel="noopener">TILT Higher Ed Resources</a> — templates, examples, and the Winkelmes team&rsquo;s ongoing work.</li>
+        <li><a href="https://quod.lib.umich.edu/t/tia/17063888.0037.205/--measuring-transparency-a-learningfocused-assignment-rubric?rgn=main&amp;view=fulltext" target="_blank" rel="noopener">Measuring Transparency: A Learning-Focused Assignment Rubric</a> (Palmer, Gravett, LaFleur 2018) — a 19-component instrument to audit your own assignments.</li>
+        <li><b>Starting move:</b> pick one assignment you have this term. Score it against Purpose / Task / Criteria. Rewrite whichever component is weakest.</li>
+      </ul>
+    </div>
+
+    <div class="fw">
+      <span class="tag">Two-Lane</span>
+      <h3>Programmatic assessment separation</h3>
+      <p>Developed by Danny Liu at the University of Sydney and extended by Cath Ellis at Western Sydney University. The model separates all assessment activity in a course or program into two lanes:</p>
+      <ul class="plain">
+        <li><b>Lane 1: Secured assurance of learning.</b> The one or two moments in a course (or two to four in a program) where the institution needs to be confident the student actually did the work. Oral defenses, supervised tasks, in-person presentations, proctored capstones. Designed for security and observability.</li>
+        <li><b>Lane 2: Formative, AI-rich, repeatable practice.</b> Everything else. Students experiment, revise, and fail cheaply. AI use is explicit and often welcomed. Cath Ellis&rsquo;s FIRE refinement specifies Lane 2 should be Formative, Instant-feedback, Repeatable, and build Evaluative judgement.</li>
+      </ul>
+      <p>This move stops faculty from trying to AI-proof every assignment. Security investment is finite, and spreading it thinly across every task produces friction without protection. Concentrating it in specific Lane 1 moments frees the much larger Lane 2 surface for experimentation and AI-aware learning.</p>
+      <h4 class="look">Where to look</h4>
+      <ul class="look-list">
+        <li><a href="https://educational-innovation.sydney.edu.au/teaching@sydney/program-level-assessment-two-lane/" target="_blank" rel="noopener">University of Sydney Two-Lane operational guide</a> — the public implementation document with worked examples.</li>
+        <li><a href="https://www.theoppositeofcheating.com/post/episode-28-danny-liu" target="_blank" rel="noopener">Opposite of Cheating, Ep 28 — Danny Liu</a> and <a href="https://www.theoppositeofcheating.com/post/episode-36-cath-ellis" target="_blank" rel="noopener">Ep 36 — Cath Ellis</a>.</li>
+        <li><b>Starting move:</b> identify the one or two moments in your course where a credential-defensible claim about student learning is made. Everything else is Lane 2.</li>
+      </ul>
+    </div>
+
+    <div class="design-sentence">
+      <p>How they compose: TILT tells you whether an assignment is well-designed for learning. Two-Lane tells you where it belongs and the stakes. Held together, they yield a single design sentence for every assignment: &ldquo;This is a <span class="br">Lane [1 or 2]</span> assignment, scoring <span class="br">[Exemplary / Accomplished / Emerging]</span> on TILT.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIES -->
+<section class="soft">
+  <div class="wrap">
+    <p class="eyebrow">The nine strategies</p>
+    <div class="gold-rule"></div>
+    <h2 style="margin-bottom:1.2em;">Each move, with why it works, how to do it, and where to look</h2>
+
+    <!-- 1 -->
+    <article class="strategy" id="s1">
+      <div class="shead">
+        <div class="num">1</div>
+        <h3>Set an explicit AI-use policy for each assignment, not just the syllabus</h3>
+      </div>
+      <span class="clabel" style="background:#F7EEF1;color:#8C1D40;">Explicit expectations</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>Blanket &ldquo;AI is prohibited&rdquo; or &ldquo;AI is allowed&rdquo; statements at the syllabus level don&rsquo;t help students make good choices on specific tasks. Per-assignment guidance (&ldquo;AI may be used for X, not for Y, and here&rsquo;s why&rdquo;) treats students as capable of ethical judgment. It removes the ambiguity that leads to quiet, unspoken decisions about AI use, and reduces the chance of a student following the rules for course A while doing work for course B. Faculty are converging on a lightweight vocabulary for tagging AI use per task: the AI Assessment Scale (AIAS), ranging from Level 1 (No AI) to Level 5 (Full AI), or a simpler three-color Stoplight version.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Adopt a simple tagging system for each assignment: the AIAS (five levels) or the Stoplight approach (Red / Yellow / Green), which is simpler for entry-level adoption.</li>
+          <li>On the assignment description, include one sentence: &ldquo;AI use on this task: [level]. Reasoning: [1 sentence].&rdquo;</li>
+          <li>Ask students to disclose AI use in a brief note at the end of the submission, regardless of level.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://chatgpt.com/g/g-AKuYJ2wWG-ai-assessment-scale-aias-custom-gpt" target="_blank" rel="noopener">Mike Perkins&rsquo;s AIAS custom GPT</a> — walks you through tagging your own assignments.</li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1eIRoeKrWqMD4m9dpgeoeulr8a48ku9EoyAuYLxCqu9g/edit?gid=2027822702" target="_blank" rel="noopener">Ronald Lethcoe&rsquo;s Applied AI crosswalk</a> — maps assignment types to AI integration levels using the stoplight framework.</li>
+          <li><a href="https://aiedusimplified.substack.com/p/ai-syllabi-policies-a-look-at-the" target="_blank" rel="noopener">Lance Eaton&rsquo;s crowdsourced AI syllabus/policies compilation</a> — real syllabus language from many institutions.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 2 -->
+    <article class="strategy" id="s2">
+      <div class="shead">
+        <div class="num">2</div>
+        <h3>Open the term with short, unscripted student video or audio introductions</h3>
+      </div>
+      <span class="clabel" style="background:#E4F4FB;color:#036;">Presence &amp; relationship</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>A 60&ndash;90 second unscripted intro establishes each student&rsquo;s voice, identity, and presence for the instructor, for peers, and for the AI-integrity design of the entire course. Later assignments can reference these introductions. Students who introduce themselves at the start invest differently in the course going forward, and it signals early that this is a course where the student is the primary voice.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Use your LMS&rsquo;s built-in video/audio recorder (Canvas Studio, Panopto, and Kaltura all support this).</li>
+          <li>Prompt: &ldquo;Introduce yourself in 60 to 90 seconds. Tell us your name, one thing you hope to learn, and one thing about your context (job, family, hobby, place) that shapes why this course matters to you.&rdquo; Unscripted means no slides, no reading.</li>
+          <li>Grade for completion, not polish.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://flowerdarby.com/" target="_blank" rel="noopener">Flower Darby&rsquo;s website</a> — practical resources on establishing online-teacher presence in async environments.</li>
+          <li><a href="https://www.theoppositeofcheating.com/post/flower-darby" target="_blank" rel="noopener">Opposite of Cheating, Ep 13 — Flower Darby</a> — the case for human-teacher presence as integrity infrastructure.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 3 -->
+    <article class="strategy" id="s3">
+      <div class="shead">
+        <div class="num">3</div>
+        <h3>Build in at least one brief synchronous or semi-synchronous interaction per module</h3>
+      </div>
+      <span class="clabel" style="background:#E4F4FB;color:#036;">Presence &amp; relationship</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>A recurring finding in the academic-integrity research literature is that known students cheat less. A brief 1:1 or small-group interaction per module, even 10 minutes, establishes the human relationship that makes shortcuts feel wrong. When synchronous doesn&rsquo;t scale, semi-synchronous alternatives (recorded video responses, threaded voice discussions, structured office-hour sign-ups) achieve much of the same effect.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>If your section is small enough: offer 10-minute 1:1 video check-ins at one or more points in the term.</li>
+          <li>If your section is larger: use peer groups of 3 or 4 with structured discussion prompts and, if available, rotating facilitators.</li>
+          <li>Semi-synchronous alternative: students record 2-minute video reflections on a weekly prompt; peers respond via video.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://m.facebook.com/groups/632930835501841" target="_blank" rel="noopener">Higher Ed AI Writing Facebook group (Laura Dumin)</a> — an active practitioner community sharing async-course engagement patterns.</li>
+          <li><a href="https://www.theoppositeofcheating.com/post/laura-dumin" target="_blank" rel="noopener">Opposite of Cheating, Ep 24 — Laura Dumin</a> — strategies for async courses where relationships still work.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 4 -->
+    <article class="strategy" id="s4">
+      <div class="shead">
+        <div class="num">4</div>
+        <h3>Embed brief (1&ndash;2 minute) low-stakes oral concept explanations within quizzes or activities</h3>
+      </div>
+      <span class="clabel" style="background:#EAF6DD;color:#3a5a12;">Observed cognition</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>This is the &ldquo;micro-oral,&rdquo; a cheaper and more scalable cousin of full oral exams. Students record a 1-minute video explaining their reasoning on a specific concept or answer choice. The recording produces evidence of understanding that AI cannot fabricate at speed, and it focuses the assessment on the student&rsquo;s reasoning rather than the correctness of the answer alone. Students report that explaining aloud clarifies their own thinking.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Add a &ldquo;record your explanation&rdquo; prompt to 3 to 5 quiz questions per module. Use Canvas Studio or a video-response feature.</li>
+          <li>Score for evidence of reasoning: did the student explain why, not just repeat the answer? Two or three rubric criteria is enough.</li>
+          <li>Weight low (5&ndash;10% of the course grade) so students engage without high stakes.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://wstyler.ucsd.edu/oralexam/" target="_blank" rel="noopener">Will Styler&rsquo;s public oral exam protocol</a> — built for longer orals, but the rubric approach scales down to 1-minute micro-orals.</li>
+          <li><a href="https://huqi31.wixsite.com/ucsdoralexam" target="_blank" rel="noopener">UCSD Oral Exam Project (HuiHui Qi)</a> — public materials from 200+ student engineering courses.</li>
+          <li><a href="https://www.theoppositeofcheating.com/post/will-styler" target="_blank" rel="noopener">Opposite of Cheating, Ep 1 — Will Styler</a> and <a href="https://www.theoppositeofcheating.com/post/huihui-qi" target="_blank" rel="noopener">Ep 11 — HuiHui Qi</a>.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 5 -->
+    <article class="strategy" id="s5">
+      <div class="shead">
+        <div class="num">5</div>
+        <h3>Design assignments that require local, personal, or course-specific context</h3>
+      </div>
+      <span class="clabel" style="background:#FDEBDD;color:#8a4315;">Task design that resists AI substitution</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>Assignments that require external context (this student&rsquo;s workplace, this student&rsquo;s community, a specific real-world case the student is close to) are harder for AI to complete without the student&rsquo;s active involvement. AI can produce a generic answer; it cannot produce the details of a workplace situation or a lived experience. Context becomes the friction that turns AI from a substitute into a supporting tool. Read this together with Strategy 6, which draws context from inside the course instead.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Instead of &ldquo;Analyze a company&rsquo;s marketing strategy,&rdquo; try: &ldquo;Analyze the marketing of a company you have personally interacted with in the past month. Include specific details about your interaction as evidence.&rdquo;</li>
+          <li>Ask students to draw on a real workplace or community setting: &ldquo;Take a decision your organization made in the last 90 days and evaluate it against the framework we discussed.&rdquo;</li>
+          <li>Give students choice of case: they identify the situation and defend its relevance.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://www.theoppositeofcheating.com/post/episode-26-christopher-ostro" target="_blank" rel="noopener">Opposite of Cheating, Ep 26 — Christopher Ostro</a> — practical framing on personalized assignments.</li>
+          <li><a href="https://drive.google.com/drive/folders/1lEHRQv8b3DEF9B2MVemoA5F5MHFSjl42" target="_blank" rel="noopener">Christopher Ostro&rsquo;s open teaching-for-integrity materials</a> — real assignment examples you can adapt.</li>
+          <li><a href="https://www.theoppositeofcheating.com/post/episode-59-joe-clare" target="_blank" rel="noopener">Ep 59 — Joe Clare</a> — the criminology-of-cheating case for why context reduces opportunity.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 6 -->
+    <article class="strategy" id="s6">
+      <div class="shead">
+        <div class="num">6</div>
+        <h3>Personalize assignments by referencing students&rsquo; own prior work or contributions</h3>
+      </div>
+      <span class="clabel" style="background:#FDEBDD;color:#8a4315;">Task design that resists AI substitution</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>Where Strategy 5 pulls context from outside the course, this pulls it from inside. A prompt that references what this specific student wrote earlier in the term, or what a named classmate contributed to a Week 3 discussion, is one AI can help with only if the student actively brings that course-internal material into the conversation. It also builds a coherent arc: students see their own thinking developing over time, which strengthens intrinsic motivation.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Design a mid-term or final that requires the student to build on, extend, or challenge their own Week 3 (or earlier) submission.</li>
+          <li>Reference class discussions: &ldquo;In our Week 3 discussion, we distinguished X from Y. Apply that distinction to a case from your own experience.&rdquo;</li>
+          <li>Structure peer review as a substantive response task: &ldquo;Read [named classmate&rsquo;s] Week 5 project. Identify the argument&rsquo;s strongest and weakest point, and defend your evaluation with specifics.&rdquo;</li>
+          <li>For discussion boards, require students to explicitly cite and respond to two named classmates&rsquo; posts.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://huqi31.wixsite.com/qi-lab" target="_blank" rel="noopener">HuiHui Qi&rsquo;s Engineering Pedagogy and Design Lab</a> — practical patterns for large-enrollment courses.</li>
+          <li><a href="https://www.theoppositeofcheating.com/post/huihui-qi" target="_blank" rel="noopener">Opposite of Cheating, Ep 11 — HuiHui Qi</a> — the operational case that this works even at 200+ students.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 7 -->
+    <article class="strategy" id="s7">
+      <div class="shead">
+        <div class="num">7</div>
+        <h3>Make process and response to feedback part of what students submit</h3>
+      </div>
+      <span class="clabel" style="background:#F1E4DD;color:#7a4630;">Process &amp; feedback</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>AI can generate a polished final artifact in seconds. What it cannot easily fabricate is a coherent process: decisions made along the way, drafts revised, resources consulted, feedback engaged with. When you require visible process evidence, the assignment becomes something the student has to actually do, and you get formative evidence you can act on before the final grade. Research also shows that revising work in response to formative feedback deepens learning.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Break one major assignment into two or three milestones (proposal &rarr; draft &rarr; final). Provide specific feedback at each stage.</li>
+          <li>Require intermediate artifacts: an outline before the draft, a draft before the final, a decision log alongside a project.</li>
+          <li>Require a response memo with the final: &ldquo;Here&rsquo;s how I addressed each piece of feedback I received.&rdquo; One paragraph per major point.</li>
+          <li>Ask for a 200-word process reflection describing what changed between draft and final and why. Grade the response to feedback alongside the artifact.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://emilypittsdonahoe.substack.com/" target="_blank" rel="noopener">Emily Pitts Donahoe&rsquo;s Unmaking the Grade</a> — an accessible practitioner reference for iterative grading.</li>
+          <li><a href="https://emilypittsdonahoe.substack.com/p/sharing-my-course-documents" target="_blank" rel="noopener">Sharing my course documents</a> — her actual working course materials, and <a href="https://www.theoppositeofcheating.com/post/episode-40-emily-pitts-donahoe" target="_blank" rel="noopener">Opposite of Cheating, Ep 40</a>.</li>
+          <li><a href="http://www.cursivetechnology.com" target="_blank" rel="noopener">Joseph Thibault&rsquo;s Cursive Technology</a> (writing-process capture) with <a href="https://www.theoppositeofcheating.com/post/joseph-thibault" target="_blank" rel="noopener">Ep 9</a>, and <a href="http://analoginspiration.ai/" target="_blank" rel="noopener">Carter Moulton&rsquo;s Analog Inspiration deck</a>.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 8 -->
+    <article class="strategy" id="s8">
+      <div class="shead">
+        <div class="num">8</div>
+        <h3>Design at least one assignment for a real audience beyond the instructor</h3>
+      </div>
+      <span class="clabel" style="background:#FDEBDD;color:#8a4315;">Task design that resists AI substitution</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>When students write for a real audience (a specific community, a workplace, a client, a public forum), the definition of &ldquo;good work&rdquo; becomes more concrete and the stakes become more meaningful. Real-audience assignments also tend to require context and voice that AI cannot easily fake. As Torrey Trust frames it: &ldquo;AI can do this. Why am I asking them to do this?&rdquo; If the answer is &ldquo;because a real person needs it,&rdquo; the assignment justifies itself.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Partner with a campus or community organization for a project-based assignment: students produce something the partner will actually use.</li>
+          <li>Ask students to produce work for a specific public forum (a blog post, a policy brief, a community presentation, a professional portfolio piece).</li>
+          <li>Give students choice of audience: they identify the recipient and defend the fit.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="http://www.torreytrust.com/" target="_blank" rel="noopener">Torrey Trust&rsquo;s website</a> — practical guidance on authentic-assessment design.</li>
+          <li><a href="https://www.theoppositeofcheating.com/post/episode-34-torrey-trust" target="_blank" rel="noopener">Opposite of Cheating, Ep 34 — Torrey Trust</a> — the framing question and how she applies it.</li>
+          <li><a href="https://higherai.substack.com/" target="_blank" rel="noopener">Jason Gulya&rsquo;s Higher AI</a> — writing-course examples of real-audience design in AI-integrated courses.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+    <!-- 9 -->
+    <article class="strategy" id="s9">
+      <div class="shead">
+        <div class="num">9</div>
+        <h3>Establish at least one secured &ldquo;assurance&rdquo; or &ldquo;Lane 1&rdquo; moment per course</h3>
+      </div>
+      <span class="clabel" style="background:#EAF6DD;color:#3a5a12;">Observed cognition</span>
+      <div class="block">
+        <h4 class="why">Why this works</h4>
+        <p>This comes directly from the Two-Lane model. If a course grants a credential, it needs at least one moment where the institution can be confident the student actually did the work: not AI, not a friend, not a paid service. This is not about turning every assignment into a proctored exam. It is about designing one Lane 1 checkpoint per course (an oral defense, an in-person presentation, a supervised task, or a proctored capstone) that anchors everything else. At ASU, this provides assurance of learning in the accreditation sense while avoiding a vexing game of cat and mouse: a defensible answer to &ldquo;how do you know?&rdquo; without asking every task to bear that weight.</p>
+        <h4 class="how">How to actually do it</h4>
+        <ul class="how-list">
+          <li>Identify the one or two moments where a claim about student learning matters most. Redesign those as observed assessments: an 8-minute oral, a supervised in-person task, or a synchronous defense.</li>
+          <li>If your course is fully async and your institution supports it: use proctored remote orals or a virtual defense session at term end.</li>
+          <li>Communicate the assurance moment early and clearly: this is where the credential is staked, and here is how students can prepare.</li>
+        </ul>
+        <h4 class="look">Where to look</h4>
+        <ul class="look-list">
+          <li><a href="https://wstyler.ucsd.edu/oralexam/" target="_blank" rel="noopener">Will Styler&rsquo;s oral exam protocol</a> — the public template most widely adapted.</li>
+          <li><a href="https://huqi31.wixsite.com/ucsdoralexam" target="_blank" rel="noopener">HuiHui Qi&rsquo;s UCSD Oral Exam Project</a> — proof this works at scale.</li>
+          <li><a href="https://educational-innovation.sydney.edu.au/teaching@sydney/program-level-assessment-two-lane/" target="_blank" rel="noopener">University of Sydney Two-Lane guide</a> — the programmatic case for concentrating assurance in specific moments.</li>
+        </ul>
+      </div>
+      <a class="backtop" href="#top">&uarr; Back to top</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- How they fit + source -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How they fit together</p>
+    <div class="gold-rule"></div>
+    <p>You do not need to adopt all nine. One approach is to pick one strategy from three different clusters: an explicit AI policy (Strategy 1), a presence move (Strategy 2 or 3), and an observed-cognition move (Strategy 4 or 9). Combining those three often produces the largest change with the least redesign effort. Task-design strategies (5, 6, 8) and process and feedback (7) then deepen the redesign where it matters most for your course.</p>
+    <div class="source-note">
+      <b>About this resource.</b> These strategies are grounded in the research and practitioner conversations documented in the Opposite of Cheating (OOC) podcast knowledge base plus adjacent field literature. This page mirrors the working document <b>&ldquo;9 Practical Strategies for Course and Assessment Design in the Age of AI&rdquo;</b> from the Office of the Provost and EdPlus (July 2026). The full briefing document, framework references, and case-study library are available in the Assessment Accelerator materials.
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Want to redesign an assessment with us?</h2>
+    <p>Tell us who you are, what you teach, and what you want help with. We will follow up.</p>
+    <div class="row">
+      <a class="btn btn-gold" href="index.html#interest">Express your interest</a>
+      <a class="btn btn-outline" href="index.html">&larr; Back to overview</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap wide">
+    <span class="asu">Arizona State University</span> · Office of the Provost + EdPlus · Assessment Design in the Age of AI · &copy; 2026
+  </div>
+</footer>
+
+</body>
+</html>

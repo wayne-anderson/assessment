@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Assessment Design in the Age of AI · ASU Office of the Provost + EdPlus</title>
+<meta name="description" content="A collaborative effort from the ASU Office of the Provost and EdPlus to help faculty design and assess authentic student learning in the age of AI. Explore the frameworks and strategies, then share what you are working on." />
+<style>
+  :root{
+    --maroon:#8C1D40;
+    --maroon-deep:#6E1732;
+    --gold:#FFC627;
+    --black:#1A1A1A;
+    --ink:#231F20;
+    --gray:#747474;
+    --line:#E5E1E3;
+    --bg:#FFFFFF;
+    --bg-soft:#FAF7F3;
+    --bg-maroon-tint:#F7EEF1;
+    --shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(140,29,64,.06);
+    --shadow-lg:0 12px 40px rgba(140,29,64,.14);
+    --radius:14px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Neue Haas Grotesk',Arial,Helvetica,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    font-size:17px;
+  }
+  em,i,cite{font-style:normal;font-weight:700;}
+  a{color:var(--maroon);text-decoration:none;}
+  a:hover{color:var(--maroon-deep);text-decoration:underline;}
+  h1,h2,h3{line-height:1.15;color:var(--maroon);font-weight:800;letter-spacing:-.01em;margin:0 0 .5em;}
+  h2{font-size:clamp(1.7rem,3.2vw,2.5rem);}
+  h3{font-size:1.2rem;color:var(--ink);font-weight:800;}
+  p{margin:0 0 1.1em;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:800;color:var(--maroon);margin:0 0 .8rem;}
+  .gold-rule{height:4px;width:64px;background:var(--gold);border-radius:3px;margin:0 0 1.4rem;}
+  .center .gold-rule{margin-left:auto;margin-right:auto;}
+
+  /* ---------- Header / Nav ---------- */
+  header.site{position:sticky;top:0;z-index:50;background:var(--maroon);border-bottom:3px solid var(--gold);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px;}
+  .brand-lockup{display:flex;flex-direction:column;line-height:1.15;}
+  .brand-lockup .asu{color:#fff;font-weight:800;font-size:1.02rem;letter-spacing:-.01em;}
+  .brand-lockup .unit{color:var(--gold);font-weight:700;font-size:.8rem;}
+  .brand-lockup a{color:inherit;text-decoration:none;}
+  .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;align-items:center;}
+  .nav ul a{color:#fff;font-weight:600;font-size:.93rem;}
+  .nav ul a:hover{color:var(--gold);text-decoration:none;}
+  .nav .navcta{background:var(--gold);color:#000;font-weight:800;padding:9px 16px;border-radius:8px;font-size:.9rem;}
+  .nav .navcta:hover{background:#ffd451;color:#000;text-decoration:none;}
+
+  /* ---------- Buttons ---------- */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:1rem;padding:14px 26px;border-radius:10px;border:2px solid transparent;cursor:pointer;transition:.15s;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-gold:hover{background:#ffd451;color:#000;text-decoration:none;transform:translateY(-1px);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;}
+  .btn-maroon{background:var(--maroon);color:#fff;}
+  .btn-maroon:hover{background:var(--maroon-deep);color:#fff;text-decoration:none;transform:translateY(-1px);}
+
+  /* ---------- Hero ---------- */
+  .hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(255,198,39,.18),transparent 60%),linear-gradient(160deg,var(--maroon) 0%,var(--maroon-deep) 100%);color:#fff;padding:76px 0 84px;position:relative;overflow:hidden;}
+  .hero .eyebrow{color:var(--gold);}
+  .hero h1{color:#fff;font-size:clamp(2.2rem,5.2vw,3.7rem);font-weight:800;max-width:16ch;margin-bottom:.35em;}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:#F3E7EB;max-width:52ch;margin-bottom:1.8em;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;}
+  .chip{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);color:#fff;font-weight:600;font-size:.86rem;padding:8px 14px;border-radius:100px;}
+  .chip b{color:var(--gold);font-weight:800;}
+
+  /* ---------- Sections ---------- */
+  section{padding:72px 0;}
+  section.soft{background:var(--bg-soft);}
+  .section-head{max-width:66ch;margin-bottom:40px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .lead-sub{font-size:1.12rem;color:#463c40;}
+
+  /* Overview */
+  .overview-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start;}
+  .pullquote{background:var(--maroon);color:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-lg);}
+  .pullquote .mark{color:var(--gold);font-size:3rem;line-height:.6;font-weight:800;display:block;}
+  .pullquote p{font-size:1.28rem;font-weight:700;margin:.4em 0 .2em;}
+  .pullquote .attr{color:#F3D9E1;font-size:.9rem;font-weight:600;}
+
+  /* Framework cards */
+  .card-2{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .fcard{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);}
+  .fcard .tag{display:inline-block;background:var(--bg-maroon-tint);color:var(--maroon);font-weight:800;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:6px;margin-bottom:14px;}
+  .fcard h3{color:var(--maroon);font-size:1.35rem;}
+  .fcard ul.plain{list-style:none;padding:0;margin:0 0 4px;}
+  .fcard ul.plain li{padding:8px 0 8px 26px;position:relative;border-top:1px solid var(--line);}
+  .fcard ul.plain li:first-child{border-top:none;}
+  .fcard ul.plain li::before{content:"";position:absolute;left:2px;top:16px;width:9px;height:9px;border-radius:2px;background:var(--gold);}
+  .fcard ul.plain li b{color:var(--maroon);}
+  .design-sentence{margin-top:28px;background:#231F20;color:#fff;border-radius:var(--radius);padding:24px 28px;display:flex;gap:18px;align-items:flex-start;}
+  .design-sentence .k{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;white-space:nowrap;padding-top:4px;}
+  .design-sentence p{margin:0;font-size:1.12rem;font-weight:600;}
+  .design-sentence .br{color:var(--gold);font-weight:800;}
+
+  /* Nine strategies */
+  .cluster-legend{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px;}
+  .legend-item{font-size:.82rem;font-weight:700;color:#5a4a4f;display:flex;align-items:center;gap:7px;}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block;}
+  .grid-9{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  a.scard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px;box-shadow:var(--shadow);position:relative;transition:.15s;border-left:5px solid var(--gold);display:block;color:var(--ink);}
+  a.scard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);text-decoration:none;border-left-color:var(--maroon);}
+  .scard .num{font-size:.82rem;font-weight:800;color:#fff;background:var(--maroon);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+  .scard h3{font-size:1.02rem;margin-bottom:.4em;line-height:1.25;color:var(--ink);}
+  .scard p{font-size:.92rem;color:#514549;margin:0;}
+  .scard .clabel{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-top:12px;display:inline-block;}
+  .scard .more{margin-top:14px;font-size:.86rem;font-weight:800;color:var(--maroon);display:flex;align-items:center;gap:6px;}
+  a.scard:hover .more{gap:10px;}
+  .nine-cta{margin-top:38px;text-align:center;}
+  .nine-cta .note{font-size:.88rem;color:var(--gray);margin-top:12px;}
+
+  /* Integrity embed */
+  .pdf-frame{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);background:#f1eef0;}
+  .pdf-frame iframe{width:100%;height:760px;border:0;display:block;}
+  .pdf-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--maroon);color:#fff;padding:14px 20px;}
+  .pdf-bar .t{font-weight:800;}
+  .pdf-bar a{color:#000;background:var(--gold);padding:8px 15px;border-radius:8px;font-weight:800;font-size:.86rem;}
+  .pdf-bar a:hover{background:#ffd451;text-decoration:none;}
+  .mini-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:6px;}
+  .mini-stats div{border-left:3px solid var(--gold);padding-left:12px;}
+  .mini-stats b{display:block;color:var(--maroon);font-size:1.4rem;font-weight:800;}
+  .mini-stats span{font-size:.82rem;color:var(--gray);font-weight:600;}
+
+  /* Form */
+  .form-section{background:linear-gradient(160deg,#fff 0%,var(--bg-maroon-tint) 100%);}
+  .form-wrap{max-width:760px;margin:0 auto;}
+  .embed-slot{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden;}
+  .embed-banner{background:repeating-linear-gradient(45deg,#FFF6D9,#FFF6D9 12px,#FFEFBD 12px,#FFEFBD 24px);border-bottom:2px dashed var(--gold);color:#6b5300;font-weight:700;font-size:.82rem;padding:10px 20px;text-align:center;}
+  .embed-inner{padding:30px 34px 36px;}
+  .form-preview label{display:block;font-weight:700;color:var(--ink);font-size:.92rem;margin:16px 0 6px;}
+  .form-preview .req{color:var(--maroon);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .form-preview input,.form-preview select,.form-preview textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;font:inherit;font-size:.95rem;background:#FCFBFB;color:#463c40;}
+  .form-preview textarea{min-height:120px;resize:vertical;}
+  .form-preview .hint{font-size:.8rem;color:var(--gray);margin:5px 0 0;font-weight:500;}
+  .preview-note{margin-top:22px;background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:.84rem;color:#5a4a4f;}
+  .preview-note b{color:var(--maroon);}
+
+  /* Footer */
+  footer.site{background:var(--maroon-deep);color:#F3D9E1;padding:52px 0 40px;}
+  footer.site .fgrid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;}
+  footer.site .fbrand .asu{color:#fff;font-weight:800;font-size:1.15rem;display:block;margin-bottom:4px;}
+  footer.site .fbrand .unit{color:var(--gold);font-weight:700;font-size:.92rem;}
+  footer.site .fcol p{font-size:.9rem;margin:12px 0 0;color:#EBD3DB;}
+  footer.site a{color:var(--gold);}
+  footer.site .flinks{display:flex;gap:22px;flex-wrap:wrap;font-weight:600;font-size:.9rem;}
+  footer.site .fine{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:20px;font-size:.8rem;color:#D9BBC5;}
+
+  @media(max-width:900px){
+    .overview-grid{grid-template-columns:1fr;}
+    .card-2{grid-template-columns:1fr;}
+    .grid-9{grid-template-columns:1fr 1fr;}
+    .nav ul{display:none;}
+  }
+  @media(max-width:600px){
+    body{font-size:16px;}
+    .grid-9{grid-template-columns:1fr;}
+    .row2{grid-template-columns:1fr;}
+    section{padding:52px 0;}
+    .hero{padding:56px 0 60px;}
+    .design-sentence{flex-direction:column;gap:8px;}
+    .embed-inner{padding:24px 20px 28px;}
+    .pdf-frame iframe{height:560px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand-lockup">
+      <a href="index.html">
+        <span class="asu">Arizona State University</span>
+        <span class="unit">Office of the Provost + EdPlus</span>
+      </a>
+    </div>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#frameworks">Frameworks</a></li>
+      <li><a href="strategies.html">Nine Strategies</a></li>
+      <li><a href="#integrity">Integrity by Design</a></li>
+      <li><a class="navcta" href="#interest">Express Interest</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Arizona State University · Office of the Provost + EdPlus</p>
+    <h1>Assessment design in the age of AI</h1>
+    <p class="lead">A collaborative effort to help faculty cultivate and assess authentic student learning at a transformational moment. Explore the frameworks and strategies below, then tell us what you want to redesign.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#interest">Express your interest</a>
+      <a class="btn btn-outline" href="#overview">Explore the approach</a>
+    </div>
+    <div class="hero-meta">
+      <span class="chip"><b>Two-day</b> Assessment Design Accelerator</span>
+      <span class="chip"><b>~25</b> faculty this summer</span>
+      <span class="chip">From the <b>top 100</b> enrolling ASU Online courses</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div>
+        <p class="eyebrow">What this is</p>
+        <div class="gold-rule"></div>
+        <h2>Good course design is one of our strongest moves</h2>
+        <p>The Office of the Provost and EdPlus have launched a collaborative effort, including workshops, listening sessions, and resource development, aimed at supporting faculty as we find effective ways to cultivate and assess student learning right now. The effort will grow and take shape based on faculty input.</p>
+        <p>These strategies shaped what we ran this summer: the <b>Assessment Design Accelerator</b>, a two-day event with faculty from the top 100 enrolling ASU Online courses. Along the way we have done the researching, reading, and testing so faculty do not have to start from scratch.</p>
+        <p>A through-line to hold in mind: cheating prevention is a function of design, not solely of enforcement. The work below redesigns assignments and assessments so that authentic student learning becomes easier to see, including at scale, and so students are empowered to create work worth doing regardless of what AI can produce.</p>
+      </div>
+      <aside class="pullquote">
+        <span class="mark">&ldquo;</span>
+        <p>Good course design is one of our strongest moves in this environment. When we invest in it, we are in a much better position to meet the challenges AI has surfaced.</p>
+        <span class="attr">Office of the Provost + EdPlus</span>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRAMEWORKS ============ -->
+<section id="frameworks" class="soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Two anchor frameworks</p>
+      <div class="gold-rule"></div>
+      <h2>Two frameworks that anchor the work</h2>
+      <p class="lead-sub">They answer different questions. Held together, they turn abstract redesign into a single, concrete design sentence for every assignment.</p>
+    </div>
+    <div class="card-2">
+      <div class="fcard">
+        <span class="tag">TILT</span>
+        <h3>Transparency in Learning and Teaching</h3>
+        <p>Most assignment failures are failures of student-facing clarity, not student capability. TILT asks faculty to make three things explicit on every assignment:</p>
+        <ul class="plain">
+          <li><b>Purpose.</b> Why this assignment, and what skill it builds that students use beyond the course.</li>
+          <li><b>Task.</b> What to do, in what steps, in what format. Process is named, not assumed.</li>
+          <li><b>Criteria.</b> What success looks like, with examples of stronger and weaker work.</li>
+        </ul>
+        <p style="margin-top:16px;font-size:.94rem;color:#514549;">More than 15 years of multi-institutional research shows TILT-redesigned assignments raise confidence, belonging, and skill mastery, and close equity gaps without lowering rigor. The Purpose question, in Torrey Trust&rsquo;s words: <b>&ldquo;AI can do this. Why am I asking them to do this?&rdquo;</b></p>
+      </div>
+      <div class="fcard">
+        <span class="tag">Two-Lane</span>
+        <h3>Programmatic assessment separation</h3>
+        <p>Stop trying to AI-proof every assignment. Security investment is finite, so concentrate it where it counts and free the rest for experimentation.</p>
+        <ul class="plain">
+          <li><b>Lane 1: Secured assurance.</b> The one or two moments where the institution must be confident the student did the work. Oral defenses, supervised tasks, proctored capstones.</li>
+          <li><b>Lane 2: Formative, AI-rich practice.</b> Everything else. Students experiment, revise, and fail cheaply, with AI use explicit and often welcomed.</li>
+        </ul>
+        <p style="margin-top:16px;font-size:.94rem;color:#514549;">This produces a coherent answer to the credential question: at which moment does this course stake its claim about what the student can do?</p>
+      </div>
+    </div>
+    <div class="design-sentence">
+      <span class="k">The design<br>sentence</span>
+      <p>&ldquo;This is a <span class="br">Lane [1 or 2]</span> assignment, scoring <span class="br">[Exemplary / Accomplished / Emerging]</span> on TILT.&rdquo; When a faculty member can produce that sentence about an assignment, redesign becomes concrete rather than abstract.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NINE STRATEGIES ============ -->
+<section id="strategies">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Practical moves</p>
+      <div class="gold-rule"></div>
+      <h2>Nine practical strategies</h2>
+      <p class="lead-sub">Each comes from real faculty who have published protocols, materials, or working models you can adapt for your course. Select any card to open the full strategy: why it works, how to actually do it, and where to look.</p>
+    </div>
+
+    <div class="cluster-legend">
+      <span class="legend-item"><span class="dot" style="background:#8C1D40"></span>Explicit expectations</span>
+      <span class="legend-item"><span class="dot" style="background:#00A3E0"></span>Presence &amp; relationship</span>
+      <span class="legend-item"><span class="dot" style="background:#78BE20"></span>Observed cognition</span>
+      <span class="legend-item"><span class="dot" style="background:#FF7F32"></span>Task design that resists AI substitution</span>
+      <span class="legend-item"><span class="dot" style="background:#AF674B"></span>Process &amp; feedback</span>
+    </div>
+
+    <div class="grid-9">
+      <a class="scard" href="strategies.html#s1">
+        <div class="num">1</div>
+        <h3>Set an explicit AI-use policy for each assignment</h3>
+        <p>Per-task guidance (a level on the AI Assessment Scale, or a red / yellow / green tag) beats one blanket syllabus rule.</p>
+        <span class="clabel" style="color:#8C1D40">Explicit expectations</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s2">
+        <div class="num">2</div>
+        <h3>Open with short, unscripted student intros</h3>
+        <p>A 60&ndash;90 second video or audio intro establishes each student&rsquo;s voice and presence for the whole course.</p>
+        <span class="clabel" style="color:#00A3E0">Presence &amp; relationship</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s3">
+        <div class="num">3</div>
+        <h3>Build in brief interaction each module</h3>
+        <p>Known students cheat less. A short synchronous or semi-synchronous touchpoint makes shortcuts feel wrong.</p>
+        <span class="clabel" style="color:#00A3E0">Presence &amp; relationship</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s4">
+        <div class="num">4</div>
+        <h3>Embed brief low-stakes oral explanations</h3>
+        <p>A one-minute &ldquo;micro-oral&rdquo; where students explain their reasoning produces evidence AI cannot fabricate at speed.</p>
+        <span class="clabel" style="color:#78BE20">Observed cognition</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s5">
+        <div class="num">5</div>
+        <h3>Require local, personal, or course-specific context</h3>
+        <p>A real workplace, community, or lived case turns AI from a substitute into a supporting tool.</p>
+        <span class="clabel" style="color:#FF7F32">Task design vs. AI substitution</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s6">
+        <div class="num">6</div>
+        <h3>Reference students&rsquo; own prior work</h3>
+        <p>Build a mid-term on a student&rsquo;s Week 3 submission or a named classmate&rsquo;s post, so course-internal context is required.</p>
+        <span class="clabel" style="color:#FF7F32">Task design vs. AI substitution</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s7">
+        <div class="num">7</div>
+        <h3>Make process and feedback part of the deliverable</h3>
+        <p>Drafts, decision logs, and a response memo make the work something the student has to actually do.</p>
+        <span class="clabel" style="color:#AF674B">Process &amp; feedback</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s8">
+        <div class="num">8</div>
+        <h3>Design for a real audience beyond the instructor</h3>
+        <p>When a real person needs the work, &ldquo;good&rdquo; becomes concrete and the assignment justifies itself.</p>
+        <span class="clabel" style="color:#FF7F32">Task design vs. AI substitution</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+      <a class="scard" href="strategies.html#s9">
+        <div class="num">9</div>
+        <h3>Establish one secured &ldquo;assurance&rdquo; moment</h3>
+        <p>One Lane 1 checkpoint per course anchors everything else and answers &ldquo;how do you know?&rdquo; for accreditation.</p>
+        <span class="clabel" style="color:#78BE20">Observed cognition</span>
+        <span class="more">Read the strategy &rarr;</span>
+      </a>
+    </div>
+
+    <div class="nine-cta">
+      <a class="btn btn-maroon" href="strategies.html">Open the full nine strategies, with the how-to and sources &rarr;</a>
+      <p class="note">The complete resource: why each move works, how to actually do it, and where to look, plus the two foundational frameworks in depth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRITY BY DESIGN ============ -->
+<section id="integrity" class="soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Companion resource</p>
+      <div class="gold-rule"></div>
+      <h2>Integrity Through Design</h2>
+      <p class="lead-sub">Academic integrity is not just upheld, it is actively cultivated through thoughtful course design. Grounded in the values of Principled Innovation, this guide treats integrity as a design challenge that centers human dignity and a culture of shared responsibility and trust.</p>
+      <div class="mini-stats">
+        <div><b>34</b><span>Practical strategies</span></div>
+        <div><b>3</b><span>Areas: pedagogy, technology, community &amp; culture</span></div>
+        <div><b>1</b><span>Traditional vs. AI-aware crosswalk</span></div>
+      </div>
+    </div>
+    <div class="pdf-frame">
+      <div class="pdf-bar">
+        <span class="t">Integrity Through Design &middot; Teaching in the Age of AI</span>
+        <a href="https://drive.google.com/file/d/1Vtoomeb-7eXMgTaFYmuAAmj_JDkaiT2d/view" target="_blank" rel="noopener">Open in Google Drive &rarr;</a>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1Vtoomeb-7eXMgTaFYmuAAmj_JDkaiT2d/preview" allow="autoplay" title="Integrity Through Design, Teaching in the Age of AI"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEREST FORM ============ -->
+<section id="interest" class="form-section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Tell us what you&rsquo;re working on</p>
+      <div class="gold-rule"></div>
+      <h2>Express your interest</h2>
+      <p class="lead-sub">Want to redesign an assessment with us, or just stay in the loop as this effort grows? Share a few details and we will follow up.</p>
+    </div>
+
+    <div class="form-wrap">
+      <div class="embed-slot">
+        <div class="embed-banner">Preview of the interest form fields. Replace this block with your Superhuman form embed.</div>
+        <div class="embed-inner">
+
+          <!-- ============================================================
+               SUPERHUMAN FORM EMBED GOES HERE
+               1. In Superhuman, build the form with the fields shown below.
+               2. Copy the embed / share code Superhuman gives you.
+               3. Delete everything inside this .embed-inner div (including the
+                  .form-preview block and this comment) and paste the embed here.
+               4. You can also delete the yellow .embed-banner above once live.
+               ============================================================ -->
+
+          <div class="form-preview" aria-hidden="true">
+            <div class="row2">
+              <div>
+                <label>First name <span class="req">*</span></label>
+                <input type="text" placeholder="First name" disabled />
+              </div>
+              <div>
+                <label>Last name <span class="req">*</span></label>
+                <input type="text" placeholder="Last name" disabled />
+              </div>
+            </div>
+
+            <label>ASU email <span class="req">*</span></label>
+            <input type="email" placeholder="you@asu.edu" disabled />
+
+            <label>College <span class="req">*</span></label>
+            <select disabled>
+              <option>Select your college</option>
+            </select>
+            <p class="hint">Use your ASU college. Best set up as a dropdown of the canonical college names.</p>
+
+            <label>Courses you&rsquo;re interested in redesigning <span class="req">*</span></label>
+            <input type="text" placeholder="e.g. BIO 100, ENG 101" disabled />
+            <p class="hint">Course prefixes and numbers, or the course titles.</p>
+
+            <label>What are you thinking about?</label>
+            <textarea placeholder="What do you want help with? What are you working on or hoping to change? A sentence or two is plenty." disabled></textarea>
+            <p class="hint">Open-ended. Tell us what&rsquo;s on your mind.</p>
+          </div>
+
+          <div class="preview-note">
+            <b>Note for setup:</b> this is a styled preview so you can see the intended fields and layout. The live form will be your Superhuman embed pasted into this container. Fields to capture: first name, last name, email, college, courses of interest, and the open &ldquo;what are you working on / what you want help with.&rdquo;
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol fbrand">
+        <span class="asu">Arizona State University</span>
+        <span class="unit">Office of the Provost + EdPlus</span>
+        <p>A collaborative effort to help faculty design and assess<br>authentic student learning in the age of AI.</p>
+      </div>
+      <div class="fcol">
+        <div class="flinks">
+          <a href="#overview">Overview</a>
+          <a href="#frameworks">Frameworks</a>
+          <a href="strategies.html">Nine Strategies</a>
+          <a href="#integrity">Integrity by Design</a>
+          <a href="#interest">Express Interest</a>
+        </div>
+      </div>
+    </div>
+    <div class="fine">
+      &copy; 2026 Arizona State University. Office of the Provost + EdPlus. Assessment Design in the Age of AI.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
