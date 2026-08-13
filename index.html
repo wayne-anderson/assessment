@@ -85,11 +85,9 @@
   .lead-sub{font-size:1.12rem;color:#463c40;}
 
   /* Overview */
-  .overview-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start;}
-  .pullquote{background:var(--maroon);color:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-lg);}
-  .pullquote .mark{color:var(--gold);font-size:3rem;line-height:.6;font-weight:800;display:block;}
-  .pullquote p{font-size:1.28rem;font-weight:700;margin:.4em 0 .2em;}
-  .pullquote .attr{color:#F3D9E1;font-size:.9rem;font-weight:600;}
+  .overview-single{max-width:72ch;}
+  .conviction{border-left:4px solid var(--gold);padding:4px 0 4px 20px;font-size:1.1rem;color:#3a3033;margin-top:1.4em;}
+  .conviction b{color:var(--maroon);}
 
   /* Framework cards */
   .card-2{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
@@ -160,7 +158,7 @@
   footer.site .fine{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:20px;font-size:.8rem;color:#D9BBC5;}
 
   @media(max-width:900px){
-    .overview-grid{grid-template-columns:1fr;}
+    .overview-single{max-width:none;}
     .card-2{grid-template-columns:1fr;}
     .grid-9{grid-template-columns:1fr 1fr;}
     .nav ul{display:none;}
@@ -219,20 +217,14 @@
 <!-- ============ OVERVIEW ============ -->
 <section id="overview">
   <div class="wrap">
-    <div class="overview-grid">
-      <div>
-        <p class="eyebrow">What this is</p>
-        <div class="gold-rule"></div>
-        <h2>Good course design is one of our strongest moves</h2>
-        <p>The Office of the Provost and EdPlus have launched a collaborative effort, including workshops, listening sessions, and resource development, aimed at supporting faculty as we find effective ways to cultivate and assess student learning right now. The effort will grow and take shape based on faculty input.</p>
-        <p>These strategies shaped what we ran this summer: the <b>Assessment Design Accelerator</b>, a two-day event with faculty from the top 100 enrolling ASU Online courses. Along the way we have done the researching, reading, and testing so faculty do not have to start from scratch.</p>
-        <p>A through-line to hold in mind: cheating prevention is a function of design, not solely of enforcement. The work below redesigns assignments and assessments so that authentic student learning becomes easier to see, including at scale, and so students are empowered to create work worth doing regardless of what AI can produce.</p>
-      </div>
-      <aside class="pullquote">
-        <span class="mark">&ldquo;</span>
-        <p>Good course design is one of our strongest moves in this environment. When we invest in it, we are in a much better position to meet the challenges AI has surfaced.</p>
-        <span class="attr">Office of the Provost + EdPlus</span>
-      </aside>
+    <div class="overview-single">
+      <p class="eyebrow">What this is</p>
+      <div class="gold-rule"></div>
+      <h2>Good course design is our strongest move</h2>
+      <p>The Office of the Provost and EdPlus have launched a collaborative effort, including workshops, listening sessions, and resource development, aimed at supporting faculty in developing effective ways to cultivate and assess our students&rsquo; learning during this transformational moment. The effort will grow and take shape based on faculty input.</p>
+      <p>These strategies and frameworks shaped what we ran in July: the <b>Assessment Design Accelerator</b>, a two-day event with faculty from the top 100 enrolling ASU Online courses. About 25 participants joined us this summer, and it is something we are exploring doing more of going forward. Along the way we have done the researching, reading, and testing so faculty do not have to start from scratch.</p>
+      <p>A through-line to hold in mind: cheating prevention is a function of design, not solely of enforcement. The strategies below redesign assignments and assessments so that authentic student learning becomes easier to see, including at scale, and so students are empowered to create work worth doing regardless of what AI can produce.</p>
+      <p class="conviction">Our conviction runs through all of it: <b>good course design is our strongest move in this environment.</b> When we invest in it, we are in a much better position to meet the challenges AI has surfaced.</p>
     </div>
   </div>
 </section>
@@ -250,28 +242,28 @@
       <div class="fcard">
         <span class="tag">TILT</span>
         <h3>Transparency in Learning and Teaching</h3>
-        <p>Most assignment failures are failures of student-facing clarity, not student capability. TILT asks faculty to make three things explicit on every assignment:</p>
+        <p>A small, high-leverage change to how assignments are written. Many students, especially those first in their family to attend college, struggle not because the work is too hard but because the unwritten rules are unclear. TILT makes three things explicit on every assignment:</p>
         <ul class="plain">
-          <li><b>Purpose.</b> Why this assignment, and what skill it builds that students use beyond the course.</li>
-          <li><b>Task.</b> What to do, in what steps, in what format. Process is named, not assumed.</li>
-          <li><b>Criteria.</b> What success looks like, with examples of stronger and weaker work.</li>
+          <li><b>Purpose.</b> Why am I doing this? The skills practiced, knowledge gained, and connection to course outcomes.</li>
+          <li><b>Task.</b> What exactly do I do? The steps, what to avoid, and any productive-struggle left open on purpose.</li>
+          <li><b>Criteria.</b> How is it judged? A checklist or rubric with annotated examples of successful work.</li>
         </ul>
-        <p style="margin-top:16px;font-size:.94rem;color:#514549;">More than 15 years of multi-institutional research shows TILT-redesigned assignments raise confidence, belonging, and skill mastery, and close equity gaps without lowering rigor. The Purpose question, in Torrey Trust&rsquo;s words: <b>&ldquo;AI can do this. Why am I asking them to do this?&rdquo;</b></p>
+        <p style="margin-top:16px;font-size:.94rem;color:#514549;">An AAC&amp;U pilot across 7 minority-serving institutions found that TILTing just two assignments produced significant gains in confidence, belonging, and skill mastery, with the largest gains for first-generation and underserved students. It is transparency, not more work.</p>
       </div>
       <div class="fcard">
         <span class="tag">Two-Lane</span>
-        <h3>Programmatic assessment separation</h3>
-        <p>Stop trying to AI-proof every assignment. Security investment is finite, so concentrate it where it counts and free the rest for experimentation.</p>
+        <h3>Assessment must do two jobs at once</h3>
+        <p>From the University of Sydney (Liu &amp; Bridgeman). Assessment now has to both assure that students achieved the outcomes and help them learn to work with AI. One assessment type cannot do both, so every assessment is sorted into one lane:</p>
         <ul class="plain">
-          <li><b>Lane 1: Secured assurance.</b> The one or two moments where the institution must be confident the student did the work. Oral defenses, supervised tasks, proctored capstones.</li>
-          <li><b>Lane 2: Formative, AI-rich practice.</b> Everything else. Students experiment, revise, and fail cheaply, with AI use explicit and often welcomed.</li>
+          <li><b>Lane 1: Controlled.</b> Conditions controlled enough to give a defensible signal of the student&rsquo;s own capability. This is about conditions, not location, so it fits async online. Controlled does not mean AI-banned.</li>
+          <li><b>Lane 2: Open.</b> AI use is permitted and encouraged. The focus shifts from policing AI to building AI literacy, with authentic, process-focused tasks. This is the home of most coursework.</li>
         </ul>
-        <p style="margin-top:16px;font-size:.94rem;color:#514549;">This produces a coherent answer to the credential question: at which moment does this course stake its claim about what the student can do?</p>
+        <p style="margin-top:16px;font-size:.94rem;color:#514549;">Assign lanes assessment by assessment. Put controlled conditions only where an outcome must be assured, and let most of the course live in the open lane. A single task can combine both: an open project capped by a short controlled check.</p>
       </div>
     </div>
     <div class="design-sentence">
-      <span class="k">The design<br>sentence</span>
-      <p>&ldquo;This is a <span class="br">Lane [1 or 2]</span> assignment, scoring <span class="br">[Exemplary / Accomplished / Emerging]</span> on TILT.&rdquo; When a faculty member can produce that sentence about an assignment, redesign becomes concrete rather than abstract.</p>
+      <span class="k">The design<br>summary</span>
+      <p>Two-Lane decides which lane a task lives in. TILT makes the rules of that lane explicit, especially in the open lane. Together: &ldquo;This is a <span class="br">Lane [1 or 2]</span> assignment, scored on <span class="br">Purpose / Task / Criteria</span>.&rdquo; When a faculty member can produce that summary, redesign becomes concrete.</p>
     </div>
   </div>
 </section>
@@ -292,6 +284,7 @@
       <span class="legend-item"><span class="dot" style="background:#78BE20"></span>Observed cognition</span>
       <span class="legend-item"><span class="dot" style="background:#FF7F32"></span>Task design that resists AI substitution</span>
       <span class="legend-item"><span class="dot" style="background:#AF674B"></span>Process &amp; feedback</span>
+      <span class="legend-item"><span class="dot" style="background:#2F6F7E"></span>Lane 1 controlled assurance</span>
     </div>
 
     <div class="grid-9">
@@ -353,9 +346,9 @@
       </a>
       <a class="scard" href="strategies.html#s9">
         <div class="num">9</div>
-        <h3>Establish one secured &ldquo;assurance&rdquo; moment</h3>
-        <p>One Lane 1 checkpoint per course anchors everything else and answers &ldquo;how do you know?&rdquo; for accreditation.</p>
-        <span class="clabel" style="color:#78BE20">Observed cognition</span>
+        <h3>Establish a controlled (Lane 1) assurance assessment</h3>
+        <p>At least one assessment under controlled conditions gives a defensible signal of the student&rsquo;s own capability. Controlled, not AI-banned, not in-person.</p>
+        <span class="clabel" style="color:#2F6F7E">Lane 1 controlled assurance</span>
         <span class="more">Read the strategy &rarr;</span>
       </a>
     </div>
