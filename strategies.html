@@ -81,6 +81,10 @@
   .lanes{display:grid;gap:12px;margin:14px 0;}
   .lane{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;background:#fff;}
   .lane b{color:var(--maroon);}
+  .lane .lane-sub{list-style:none;margin:11px 0 0;padding:0;}
+  .lane .lane-sub li{position:relative;padding:5px 0 5px 20px;font-size:.95rem;color:#3f3539;}
+  .lane .lane-sub li::before{content:"";position:absolute;left:2px;top:13px;width:8px;height:8px;border-radius:2px;background:var(--gold);}
+  .lane .lane-sub li b{color:var(--maroon);}
   .lane-note{background:var(--bg-tint);border:1px solid #E7CBD6;border-radius:10px;padding:13px 16px;margin:14px 0;font-size:.95rem;}
   .lane-note b{color:var(--maroon);}
   .misreads{margin:18px 0 4px;}
@@ -305,8 +309,21 @@
           <p>The two-lane model (University of Sydney; Danny Liu and Adam Bridgeman, 2024&ndash;2025) starts from a simple premise: assessment now has to do two jobs at once. It must <b>assure</b>, in the accreditation sense of providing trustworthy evidence, that students actually achieved the learning outcomes, and it must <b>help students learn</b> to work productively with AI. One assessment type cannot do both jobs well, so the model sorts every assessment into one of two lanes. Lane 1 assessments are secure and supervised; they may restrict or prohibit AI use, though a ban is not required. Lane 2 assessments are open, allowing instructors to assess a course&rsquo;s learning outcomes as students will actually encounter them, in a world where AI tools are available.</p>
           <div class="lane-note"><b>Our context: online and asynchronous.</b> Lane 1 is defined by controlled conditions, not by a physical room, so the model fits async online directly. Online, we achieve &ldquo;controlled&rdquo; through course and platform design. The specific methods are an area our team should continue to refine to meet our learners&rsquo; needs and our model.</div>
           <div class="lanes">
-            <div class="lane" style="border-left-color:var(--c-assure)"><b>Lane 1 &mdash; Controlled (Assessment of Learning).</b> Conditions controlled enough to assure the work reflects this student&rsquo;s own capability. The distinction is about conditions and purpose, not location. Controlled does not mean AI-banned: AI may be banned, restricted, or deliberately permitted in specified ways, depending on the learning outcome being assured. Options include identity-verified time-boxed tasks and authenticated performance work. <b>Purpose:</b> a defensible signal of genuine achievement.</div>
-            <div class="lane" style="border-left-color:var(--c-task)"><b>Lane 2 &mdash; Open (Assessment for and as Learning).</b> Uncontrolled conditions where AI use is permitted and even encouraged. This lane still assesses the course&rsquo;s own learning outcomes: students demonstrate their skills and knowledge in the environment where they will actually use them, while developing AI literacy by evaluating, refining, and taking responsibility for AI output rather than simply submitting it. Guide AI use as a menu, not a traffic light, and make thinking visible through process artifacts (drafts, chat logs, reflections). <b>Purpose:</b> build AI-capable graduates.</div>
+            <div class="lane" style="border-left-color:var(--c-assure)"><b>Lane 1 &mdash; Controlled (Assessment of Learning).</b> The conditions are controlled enough to assure the work reflects this student&rsquo;s own capability. The distinction is about conditions and purpose, not location.
+              <ul class="lane-sub">
+                <li><b>AI may be banned, restricted, or deliberately permitted</b> in specified ways, depending on the learning outcome being assured.</li>
+                <li>Options include identity-verified time-boxed tasks, authenticated performance work, and other methods, an area our team should continue to refine.</li>
+                <li><b>Purpose:</b> a defensible signal of genuine achievement.</li>
+              </ul>
+            </div>
+            <div class="lane" style="border-left-color:var(--c-task)"><b>Lane 2 &mdash; Open (Assessment for and as Learning).</b> Uncontrolled conditions, where AI use is permitted and even encouraged. This lane still assesses the course&rsquo;s own learning outcomes. Students demonstrate their skills and knowledge in the environment where they will actually use them, while also developing AI literacy: evaluating, refining, and taking responsibility for AI output rather than simply submitting it.
+              <ul class="lane-sub">
+                <li>Authentic, process-focused, real-world tasks, the natural home of most async coursework.</li>
+                <li><b>Guide AI use as a menu, not a traffic light:</b> don&rsquo;t micro-restrict; steer students toward the choices better for learning.</li>
+                <li>Process artifacts (drafts, AI chat logs, reflections) make the thinking visible.</li>
+                <li><b>Purpose:</b> develop and assess students&rsquo; skills and knowledge in an AI-rich environment, building AI-capable graduates along the way.</li>
+              </ul>
+            </div>
           </div>
           <p><b>The key move: assign lanes at the assessment level.</b> Lane assignment is a course-level, assessment-by-assessment decision guided by each task&rsquo;s purpose (program-level coordination is optional). Put controlled assessment only where an outcome genuinely needs to be assured, and let most of the course live in the open lane. A single task can combine both, for example an open project capped by a short controlled check. Lane 1 options are an area our team should continue to refine to meet our learners&rsquo; needs and our model.</p>
           <div class="fw-pairs"><b>Pairs with TILT.</b> The two-lane model decides which lane a task lives in; TILT makes the rules of that lane explicit to students, especially the open lane, where &ldquo;how may I use AI here, and how will it be graded?&rdquo; must be stated plainly.</div>
