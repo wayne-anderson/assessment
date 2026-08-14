@@ -107,6 +107,18 @@
   .compose p{margin:0;font-size:1.06rem;font-weight:500;color:#F4EFEA;}
   .compose .br{color:var(--gold);font-weight:800;}
 
+  /* Where to start box */
+  .start{background:linear-gradient(160deg,#fff 0%,var(--bg-tint) 100%);border:1px solid #E7CBD6;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px 30px;margin:8px 0 10px;scroll-margin-top:88px;}
+  .start h2{font-size:1.3rem;margin-bottom:.3em;}
+  .start .intro{margin:0 0 16px;color:#3f3539;}
+  .start ul.routes{list-style:none;padding:0;margin:0;}
+  .start ul.routes li{position:relative;padding:11px 0 11px 26px;border-top:1px solid var(--line);}
+  .start ul.routes li:first-child{border-top:none;}
+  .start ul.routes li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:2px;background:var(--gold);}
+  .start ul.routes .chal{color:var(--ink);font-weight:600;}
+  .start ul.routes a{font-weight:800;white-space:nowrap;}
+  .start .closer{margin:16px 0 0;font-size:.95rem;color:#514549;}
+
   /* Cluster group header */
   .cluster-head{display:flex;align-items:center;gap:12px;margin:44px 0 18px;}
   .cluster-head .bar{width:34px;height:6px;border-radius:3px;}
@@ -196,7 +208,7 @@
   <div class="wrap">
     <p class="eyebrow">The full resource</p>
     <h1>Nine practical strategies for assessment design in the age of AI</h1>
-    <p>Each one comes from real faculty who have published protocols, materials, or working models you might consider adapting for your course and the ASU environment. You do not need all nine. One move from a few different clusters often produces the largest change with the least redesign effort.</p>
+    <p>Each one comes from real faculty who have published materials, working models, and examples you might consider adapting for your course and the ASU environment. You do not need all nine. One move from a few different clusters often produces the largest change with the least redesign effort.</p>
   </div>
 </div>
 
@@ -210,6 +222,7 @@
       <a class="group" href="#frameworks">Frameworks</a>
       <a href="#f-tilt">TILT</a>
       <a href="#f-twolane">Two-Lane</a>
+      <a href="#start">Where should I start?</a>
       <a class="group" href="#strategies">The nine strategies</a>
       <a href="#s1"><span class="dot" style="background:var(--c-explicit)"></span>1. Per-assignment AI policy</a>
       <a href="#s2"><span class="dot" style="background:var(--c-presence)"></span>2. Student intros</a>
@@ -220,7 +233,6 @@
       <a href="#s7"><span class="dot" style="background:var(--c-process)"></span>7. Process &amp; feedback</a>
       <a href="#s8"><span class="dot" style="background:var(--c-task)"></span>8. Real audience</a>
       <a href="#s9"><span class="dot" style="background:var(--c-assure)"></span>9. Controlled (Lane 1) assurance</a>
-      <a class="group" href="#fit">How they fit</a>
       <a class="group" href="#getinvolved">Get involved</a>
     </nav>
   </aside>
@@ -233,6 +245,7 @@
       <summary>Jump to a section</summary>
       <div class="jl">
         <a href="#frameworks">Frameworks: TILT &amp; Two-Lane</a>
+        <a href="#start">Where should I start?</a>
         <a href="#s1">1. Per-assignment AI policy</a>
         <a href="#s2">2. Student intros</a>
         <a href="#s3">3. Interaction per module</a>
@@ -242,7 +255,6 @@
         <a href="#s7">7. Process &amp; feedback</a>
         <a href="#s8">8. Real audience</a>
         <a href="#s9">9. Assurance moment</a>
-        <a href="#fit">How they fit together</a>
         <a href="#getinvolved">Get involved</a>
       </div>
     </details>
@@ -304,7 +316,7 @@
 
         <div class="fw" id="f-twolane">
           <span class="tag">Two-Lane</span>
-          <h3>Assessment must do two jobs at once</h3>
+          <h3>Thinking about two purposes for assessment</h3>
           <div class="lane-note"><b>Why we&rsquo;re sharing it.</b> We think this model offers a promising way to conceptualize assessments within a course and within a program. It is important to the workshop and will organize much of our work together. But we also want to know what you think of it: would you refine it? Revise it? Reject it? In short, we are asking that you work with this model, but not that you do so uncritically.</div>
           <p>The two-lane model (University of Sydney; Danny Liu and Adam Bridgeman, 2024&ndash;2025) starts from a simple premise: assessment now has to do two jobs at once. It must <b>assure</b>, in the accreditation sense of providing trustworthy evidence, that students actually achieved the learning outcomes, and it must <b>help students learn</b> to work productively with AI. One assessment type cannot do both jobs well, so the model sorts every assessment into one of two lanes. Lane 1 assessments are secure and supervised; they may restrict or prohibit AI use, though a ban is not required. Lane 2 assessments are open, allowing instructors to assess a course&rsquo;s learning outcomes as students will actually encounter them, in a world where AI tools are available.</p>
           <div class="lane-note"><b>Our context: online and asynchronous.</b> Lane 1 is defined by controlled conditions, not by a physical room, so the model fits async online directly. Online, we achieve &ldquo;controlled&rdquo; through course and platform design. The specific methods are an area our team should continue to refine to meet our learners&rsquo; needs and our model.</div>
@@ -330,10 +342,10 @@
           <div class="part">
             <span class="plabel" style="color:var(--maroon)">How to apply it in an async course</span>
             <ul class="how">
-              <li><b>Assign a lane to each assessment.</b> Decide whether the outcome needs controlled conditions or is best developed in the open lane, and label it for students.</li>
-              <li><b>Choose the control method deliberately.</b> Where a task is controlled, work with the design team to select a fit-for-purpose method; the method is deliberately left open here and should be refined over time.</li>
+              <li><b>Consider each assessment on its own.</b> Does the learning outcome call for controlled conditions, or would students benefit from working with AI? Label the lane for students.</li>
+              <li><b>Choose the control method deliberately.</b> Where a task is controlled, work with the design team to select a method that fits; the method is deliberately left open here and should be refined over time.</li>
               <li><b>Make the open lane AI-authentic.</b> If AI can complete the task in one shot with no learning, redesign it around the student&rsquo;s judgment and critique of AI, and collect the process, not just the product.</li>
-              <li><b>Shift from policing to literacy.</b> Lead with clear expectations and AI-integrated design rather than detection; state AI-use rules plainly in every brief.</li>
+              <li><b>Focus on developing AI literacy rather than relying primarily on detection.</b> Lead with clear expectations and AI-integrated design, and state AI-use rules plainly in every brief.</li>
             </ul>
           </div>
           <div class="misreads">
@@ -341,12 +353,8 @@
             <ul>
               <li><b>Lane 1 is not &ldquo;in person&rdquo; and does not have to be &ldquo;no AI.&rdquo;</b> It means controlled conditions to assure authorship; AI may be restricted or purposefully permitted within them.</li>
               <li><b>Lane 2 is not &ldquo;unsecured&rdquo; or a free-for-all.</b> Open tasks are deliberately designed for critical, responsible AI use.</li>
-              <li><b>Don&rsquo;t over-control.</b> Controlling every task raises cost and anxiety and crowds out authentic learning. Aim for proportion, not maximum surveillance.</li>
+              <li><b>Consider where controlled conditions are truly necessary.</b> Controlling every task raises cost and anxiety and crowds out authentic learning; aim for proportion, not maximum surveillance.</li>
             </ul>
-          </div>
-          <div class="part">
-            <span class="plabel" style="color:var(--maroon)">How it connects to the strategies</span>
-            <p style="margin:0;color:#3f3539;">Strategy 9 is the Lane 1 assurance move. Strategies 1, 5, 6, 7, and 8 sit comfortably in Lane 2, where AI-integrated learning happens. Strategies 3 and 4 can support either lane depending on how they&rsquo;re deployed. When you know which lane an assessment sits in, choosing which strategies fit becomes clearer.</p>
           </div>
           <div class="part">
             <span class="plabel look">Where to look as you think about this</span>
@@ -361,12 +369,28 @@
 
       <div class="compose" id="compose">
         <h4>How TILT and Two-Lane work together</h4>
-        <p>Two-Lane decides which lane a task lives in, controlled (Lane 1) or open (Lane 2). TILT makes the rules of that lane explicit to students, especially the open lane, where &ldquo;how may I use AI here, and how will it be graded?&rdquo; must be stated plainly. Together they yield one design summary for every assessment: &ldquo;This is a <span class="br">Lane [1 or 2]</span> assignment, scored on <span class="br">Purpose / Task / Criteria</span>.&rdquo;</p>
+        <p>Two-Lane decides which lane a task lives in, controlled (Lane 1) or open (Lane 2). TILT makes the rules of that lane explicit to students, especially the open lane, where &ldquo;how may I use AI here, and how will it be graded?&rdquo; must be stated plainly. With those decisions in place, the nine strategies below offer practical ways to redesign individual assessments.</p>
       </div>
     </section>
 
     <!-- STRATEGIES -->
     <section id="strategies">
+
+      <!-- Where should I start? -->
+      <div class="start" id="start">
+        <p class="eyebrow">Where should I start?</p>
+        <div class="gold-rule"></div>
+        <h2>Start with the teaching challenge that fits your course</h2>
+        <p class="intro">You do not need to use all nine strategies. Pick the challenge that feels most relevant and jump to a strategy that helps:</p>
+        <ul class="routes">
+          <li><span class="chal">Students don&rsquo;t know when AI is appropriate.</span> &rarr; <a href="#s1">Start with Strategy 1</a></li>
+          <li><span class="chal">You want to strengthen student presence and connection.</span> &rarr; <a href="#s2">Explore Strategies 2</a> or <a href="#s3">3</a></li>
+          <li><span class="chal">You want students&rsquo; thinking to be more visible.</span> &rarr; <a href="#s4">Try Strategies 4</a> or <a href="#s7">7</a></li>
+          <li><span class="chal">You want assignments AI can&rsquo;t easily complete.</span> &rarr; <a href="#s5">Explore Strategies 5</a>, <a href="#s6">6</a>, or <a href="#s8">8</a></li>
+          <li><span class="chal">You want to know whether students have mastered key outcomes.</span> &rarr; <a href="#s9">Explore Strategy 9</a></li>
+        </ul>
+        <p class="closer">Not sure where to begin? Choose one strategy and try it with one assessment you already use. Combining one move from a few different clusters often produces the largest change with the least redesign effort.</p>
+      </div>
 
       <!-- Cluster: Explicit expectations -->
       <div class="cluster-head">
@@ -383,7 +407,7 @@
         <div class="part">
           <span class="plabel how">How to do it</span>
           <ul class="how">
-            <li>Adopt one tagging system: the five-level AIAS, or the simpler Red / Yellow / Green Stoplight for entry-level adoption.</li>
+            <li>Choose a simple approach: the five-level AIAS, or the simpler Red / Yellow / Green Stoplight for entry-level adoption.</li>
             <li>On each assignment, add one sentence: &ldquo;AI use on this task: [level]. Reasoning: [1 sentence].&rdquo;</li>
             <li>Ask students to disclose AI use in a brief note at the end of the submission, regardless of level.</li>
           </ul>
@@ -407,7 +431,7 @@
         <div class="shead"><div class="num">2</div><h3>Open the term with short, unscripted student video or audio introductions</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>A 60&ndash;90 second unscripted intro establishes each student&rsquo;s voice, identity, and presence for the instructor, for peers, and for the integrity design of the whole course. Later assignments can reference these introductions, and students who introduce themselves invest differently going forward. It signals early that this is a course where the student is the primary voice.</p>
+          <p>A 60&ndash;90 second unscripted intro establishes each student&rsquo;s voice, identity, and presence for the instructor and their peers. Hearing students early gives you a reference point for their later work, and students who introduce themselves early often engage differently with the course going forward. It signals from the start that this is a course where the student is the primary voice.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
@@ -426,10 +450,10 @@
       </article>
 
       <article class="strategy" id="s3" style="--cc:var(--c-presence)">
-        <div class="shead"><div class="num">3</div><h3>Build in at least one brief synchronous or semi-synchronous interaction per module</h3></div>
+        <div class="shead"><div class="num">3</div><h3>Build in a brief synchronous or semi-synchronous interaction each module</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>A recurring finding in the integrity literature is that known students cheat less. A brief 1:1 or small-group interaction per module, even 10 minutes, builds the human relationship that makes shortcuts feel wrong. When synchronous doesn&rsquo;t scale, semi-synchronous alternatives (recorded video responses, threaded voice discussions, structured office-hour sign-ups) achieve much of the same effect.</p>
+          <p>A brief 1:1 or small-group interaction per module, even 10 minutes, builds relationship and belonging and gives you a regular chance to hear students think. That presence is what keeps students engaged, and it tends to reduce corner-cutting: students are less likely to cut corners in a course where they are known to their instructor and peers. When synchronous doesn&rsquo;t scale, semi-synchronous alternatives (recorded video responses, threaded voice discussions, structured office-hour sign-ups) achieve much of the same effect.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
@@ -458,7 +482,7 @@
         <div class="shead"><div class="num">4</div><h3>Embed brief (1&ndash;2 minute) low-stakes oral concept explanations within quizzes or activities</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>This is the &ldquo;micro-oral,&rdquo; a cheaper and more scalable cousin of the full oral exam. A student records a 1-minute video explaining their reasoning on a concept or answer choice. It produces evidence of understanding AI cannot fabricate at speed, and it focuses the assessment on reasoning rather than the answer alone. Students report that explaining aloud clarifies their own thinking.</p>
+          <p>A short &ldquo;micro-oral,&rdquo; a one- to two-minute recorded explanation, asks students to talk through their reasoning on a concept or answer choice. It puts the focus on how a student thinks, not just the answer, and it builds the everyday skill of explaining your reasoning clearly. Students report that explaining aloud sharpens their own thinking, and because the reasoning is in the student&rsquo;s own voice, it gives you authentic evidence of their understanding. It also scales more readily than a full oral exam.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
@@ -488,7 +512,7 @@
         <div class="shead"><div class="num">5</div><h3>Design assignments that require local, personal, or course-specific context</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>Assignments that require external context (this student&rsquo;s workplace, community, or a real case they are close to) are harder for AI to complete without the student&rsquo;s active involvement. AI can produce a generic answer; it cannot produce the details of a specific workplace situation or lived experience. Context becomes the friction that turns AI from a substitute into a supporting tool. Read alongside Strategy 6, which draws context from inside the course.</p>
+          <p>Assignments anchored in a student&rsquo;s own context (their workplace, their community, a real case they are close to) push students to apply course ideas to a situation they actually know, which deepens learning and makes their thinking visible. That same specificity is hard to outsource: AI can produce a generic answer, but not the details of a particular workplace situation or lived experience, so it shifts AI from a substitute into a supporting tool. Read alongside Strategy 6, which draws context from inside the course.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
@@ -512,7 +536,7 @@
         <div class="shead"><div class="num">6</div><h3>Personalize assignments by referencing students&rsquo; own prior work or contributions</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>Where Strategy 5 pulls context from outside the course, this pulls it from inside. A prompt that references what this student wrote earlier, or what a named classmate contributed in Week 3, is one AI can help with only if the student actively brings that course-internal material in. It also builds a coherent arc: students see their own thinking develop over time, which strengthens intrinsic motivation.</p>
+          <p>This builds a coherent arc across the term: students see their own thinking develop over time, which strengthens intrinsic motivation and ownership of their work. Where Strategy 5 pulls context from outside the course, this pulls it from inside. A prompt that references what this student wrote earlier, or what a named classmate contributed in Week 3, is one AI can help with only if the student actively brings that course-internal material in.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
@@ -533,7 +557,7 @@
       </article>
 
       <article class="strategy" id="s8" style="--cc:var(--c-task)">
-        <div class="shead"><div class="num">8</div><h3>Design at least one assignment for a real audience beyond the instructor</h3></div>
+        <div class="shead"><div class="num">8</div><h3>Design an assignment for a real audience beyond the instructor</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>When students write for a real audience (a community, a workplace, a client, a public forum), the definition of &ldquo;good work&rdquo; becomes concrete and the stakes become meaningful. Real-audience assignments also tend to require context and voice AI cannot easily fake. As Torrey Trust frames it: &ldquo;AI can do this. Why am I asking them to do this?&rdquo; If the answer is &ldquo;because a real person needs it,&rdquo; the assignment justifies itself.</p>
@@ -563,16 +587,16 @@
       </div>
 
       <article class="strategy" id="s7" style="--cc:var(--c-process)">
-        <div class="shead"><div class="num">7</div><h3>Make process and response to feedback part of what students submit</h3></div>
+        <div class="shead"><div class="num">7</div><h3>Make how students develop their work, and respond to feedback, part of what they submit</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>AI can generate a polished final artifact in seconds. What it cannot easily fabricate is a coherent process: decisions made, drafts revised, resources consulted, feedback engaged with. Requiring visible process evidence makes the assignment something the student has to actually do, and gives you formative evidence to act on before the final grade. Revising in response to feedback also deepens learning.</p>
+          <p>Revising work in response to feedback is one of the most reliable ways to deepen learning, and it is something a student has to do for themselves. When you ask students to show how their work developed (early drafts, the decisions they made, how they responded to your comments), the assignment centers that development rather than only the final product, and you get formative evidence to act on before the final grade. AI can produce a polished final draft in seconds; it cannot easily produce a coherent account of how a particular student got there.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
           <ul class="how">
             <li>Break one major assignment into milestones (proposal &rarr; draft &rarr; final), with specific feedback at each stage.</li>
-            <li>Require intermediate artifacts: an outline before the draft, a decision log alongside a project.</li>
+            <li>Require intermediate steps: an outline before the draft, a short decision log alongside a project.</li>
             <li>Require a response memo: &ldquo;Here&rsquo;s how I addressed each piece of feedback,&rdquo; one paragraph per point.</li>
             <li>Ask for a 200-word process reflection on what changed between draft and final, and grade it alongside the artifact.</li>
           </ul>
@@ -594,19 +618,19 @@
       </div>
 
       <article class="strategy" id="s9" style="--cc:var(--c-assure)">
-        <div class="shead"><div class="num">9</div><h3>Establish at least one &ldquo;controlled&rdquo; (Lane 1) assessment where the student&rsquo;s own capability is assured</h3></div>
+        <div class="shead"><div class="num">9</div><h3>Include a controlled (Lane 1) assessment where students demonstrate what they know and can do</h3></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
-          <p>This comes directly from the Two-Lane model. If a course grants a credential, at least one assessment needs to happen under conditions controlled enough to assure the work reflects this student&rsquo;s own capability. Controlled does not mean AI-banned, and it does not mean in-person. It means conditions designed to provide a defensible signal of genuine achievement. Once that assurance moment exists, the rest of the course can live comfortably in the open lane where real learning and AI fluency develop.</p>
-          <p><b>Why it matters at ASU.</b> This provides assurance of learning in the accreditation sense while avoiding a vexing game of cat and mouse. It gives the institution a defensible answer to &ldquo;how do you know?&rdquo; without asking every task to bear that weight. Because &ldquo;controlled&rdquo; is about conditions and not location, the model fits async online directly, and the specific methods are an area our design team is continuing to refine.</p>
+          <p>This comes directly from the Two-Lane model. If a course grants a credential, at least one assessment needs to happen under conditions controlled enough to assure the work reflects this student&rsquo;s own capability. Controlled does not mean AI-banned, and it does not mean in-person. It means conditions designed to give you confidence that the work reflects what the student knows and can do. Once that assurance moment exists, the rest of the course can live comfortably in the open lane where real learning and AI fluency develop.</p>
+          <p><b>Why it matters at ASU.</b> This provides assurance of learning in the accreditation sense without turning the course into a constant contest over AI use. It gives a defensible answer to &ldquo;how do you know?&rdquo; without asking every task to bear that weight. Because &ldquo;controlled&rdquo; is about conditions and not location, the model fits async online directly, and the specific methods are an area our design team is continuing to refine.</p>
         </div>
         <div class="part">
           <span class="plabel how">How to do it</span>
           <ul class="how">
-            <li>For each assessment, decide whether the outcome needs controlled conditions (Lane 1) or is best developed in the open lane (Lane 2). Aim for at least one Lane 1 assessment; more is fine when the outcomes warrant it.</li>
-            <li>Choose the control method deliberately: identity-verified time-boxed tasks, authenticated performance work (oral defense, live demonstration, synchronous check-in), or another fit-for-purpose approach with your instructional-design partner.</li>
+            <li>Ask, for each assessment: which learning outcomes require students to demonstrate their own capability, and what conditions would give you confidence in that evidence? Consider at least one controlled (Lane 1) assessment; more is fine when the outcomes warrant it.</li>
+            <li>Choose the control method deliberately: identity-verified time-boxed tasks, authenticated performance work (oral defense, live demonstration, synchronous check-in), or another approach that fits your learning outcome, needs, and course context, in partnership with your instructional designer.</li>
             <li>Decide what AI role, if any, is appropriate within the controlled conditions. Controlled and &ldquo;AI-permitted-in-specified-ways&rdquo; can coexist.</li>
-            <li>Communicate the Lane 1 assessment early: this is where the credential is staked, and here is how students can prepare.</li>
+            <li>Communicate the Lane 1 assessment early: tell students why it matters, what it will look like, and how they can prepare.</li>
           </ul>
         </div>
         <div class="part">
@@ -620,23 +644,6 @@
       </article>
 
     </section>
-
-    <!-- Fit -->
-    <div class="fit" id="fit">
-      <p class="eyebrow">How they fit together</p>
-      <div class="gold-rule"></div>
-      <h2>Pick one move from a few clusters</h2>
-      <p>You do not need all nine. One approach is to take one strategy from three different clusters:</p>
-      <ul>
-        <li><b>Explicit expectations:</b> Strategy 1.</li>
-        <li><b>Presence and relationship:</b> Strategies 2 and 3.</li>
-        <li><b>Observed cognition</b> (Lane 1 or Lane 2, depending on how it&rsquo;s deployed)<b>:</b> Strategy 4.</li>
-        <li><b>Task design that resists AI substitution</b> (Lane 2)<b>:</b> Strategies 5, 6, and 8.</li>
-        <li><b>Process and feedback as part of the deliverable</b> (Lane 2)<b>:</b> Strategy 7.</li>
-        <li><b>Lane 1 controlled assurance:</b> Strategy 9.</li>
-      </ul>
-      <p style="margin-bottom:0;">Combining one move from each of the first three clusters (an explicit AI policy, a presence move, and an observed-cognition move) often produces the largest change with the least redesign effort.</p>
-    </div>
 
     <!-- Get involved -->
     <div class="getinvolved" id="getinvolved">
