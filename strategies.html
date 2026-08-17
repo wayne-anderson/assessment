@@ -127,8 +127,10 @@
 
   /* Strategy card */
   .strategy{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 32px;margin-bottom:20px;scroll-margin-top:88px;border-left:6px solid var(--cc,var(--gold));}
-  .strategy .shead{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+  .strategy .shead{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;}
   .strategy .num{flex:none;font-size:1.15rem;font-weight:800;color:#fff;background:var(--cc,var(--maroon));width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+  .strategy .stitle{display:flex;flex-direction:column;}
+  .strategy .ctag{display:inline-block;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--cc,var(--maroon));margin-bottom:5px;}
   .strategy .shead h3{margin:0;color:var(--ink);font-size:1.3rem;line-height:1.22;}
   .part{margin-top:20px;}
   .part:first-of-type{margin-top:6px;}
@@ -392,14 +394,8 @@
         <p class="closer">Not sure where to begin? Choose one strategy and try it with one assessment you already use. Combining one move from a few different clusters often produces the largest change with the least redesign effort.</p>
       </div>
 
-      <!-- Cluster: Explicit expectations -->
-      <div class="cluster-head">
-        <span class="bar" style="background:var(--c-explicit)"></span>
-        <div><h2>Explicit expectations</h2><span>Strategy 1</span></div>
-      </div>
-
       <article class="strategy" id="s1" style="--cc:var(--c-explicit)">
-        <div class="shead"><div class="num">1</div><h3>Set an explicit AI-use policy for each assignment, not just the syllabus</h3></div>
+        <div class="shead"><div class="num">1</div><div class="stitle"><span class="ctag" style="--cc:var(--c-explicit)">Explicit expectations</span><h3>Set an explicit AI-use policy for each assignment, not just the syllabus</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>Blanket &ldquo;AI is prohibited&rdquo; or &ldquo;AI is allowed&rdquo; statements at the syllabus level don&rsquo;t help students make good choices on specific tasks. Per-assignment guidance treats students as capable of ethical judgment, removes the ambiguity that leads to quiet decisions about AI use, and keeps the rules for one course from bleeding into another. Faculty are converging on a shared vocabulary: the AI Assessment Scale (AIAS), Level 1 (No AI) through Level 5 (Full AI), or a simpler Stoplight (Red / Yellow / Green).</p>
@@ -421,14 +417,8 @@
         </div>
       </article>
 
-      <!-- Cluster: Presence & relationship -->
-      <div class="cluster-head">
-        <span class="bar" style="background:var(--c-presence)"></span>
-        <div><h2>Presence &amp; relationship</h2><span>Strategies 2 &amp; 3</span></div>
-      </div>
-
       <article class="strategy" id="s2" style="--cc:var(--c-presence)">
-        <div class="shead"><div class="num">2</div><h3>Open the term with short, unscripted student video or audio introductions</h3></div>
+        <div class="shead"><div class="num">2</div><div class="stitle"><span class="ctag" style="--cc:var(--c-presence)">Presence &amp; relationship</span><h3>Open the term with short, unscripted student video or audio introductions</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>A 60&ndash;90 second unscripted intro establishes each student&rsquo;s voice, identity, and presence for the instructor and their peers. Hearing students early gives you a reference point for their later work, and students who introduce themselves early often engage differently with the course going forward. It signals from the start that this is a course where the student is the primary voice.</p>
@@ -450,7 +440,7 @@
       </article>
 
       <article class="strategy" id="s3" style="--cc:var(--c-presence)">
-        <div class="shead"><div class="num">3</div><h3>Build in a brief synchronous or semi-synchronous interaction each module</h3></div>
+        <div class="shead"><div class="num">3</div><div class="stitle"><span class="ctag" style="--cc:var(--c-presence)">Presence &amp; relationship</span><h3>Build in a brief synchronous or semi-synchronous interaction each module</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>A brief 1:1 or small-group interaction per module, even 10 minutes, builds relationship and belonging and gives you a regular chance to hear students think. That presence is what keeps students engaged, and it tends to reduce corner-cutting: students are less likely to cut corners in a course where they are known to their instructor and peers. When synchronous doesn&rsquo;t scale, semi-synchronous alternatives (recorded video responses, threaded voice discussions, structured office-hour sign-ups) achieve much of the same effect.</p>
@@ -472,14 +462,8 @@
         </div>
       </article>
 
-      <!-- Cluster: Observed cognition -->
-      <div class="cluster-head">
-        <span class="bar" style="background:var(--c-observed)"></span>
-        <div><h2>Observed cognition</h2><span>Strategy 4 (Lane 1 or Lane 2, depending on how it&rsquo;s deployed)</span></div>
-      </div>
-
       <article class="strategy" id="s4" style="--cc:var(--c-observed)">
-        <div class="shead"><div class="num">4</div><h3>Embed brief (1&ndash;2 minute) low-stakes oral concept explanations within quizzes or activities</h3></div>
+        <div class="shead"><div class="num">4</div><div class="stitle"><span class="ctag" style="--cc:var(--c-observed)">Observed cognition</span><h3>Embed brief (1&ndash;2 minute) low-stakes oral concept explanations within quizzes or activities</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>A short &ldquo;micro-oral,&rdquo; a one- to two-minute recorded explanation, asks students to talk through their reasoning on a concept or answer choice. It puts the focus on how a student thinks, not just the answer, and it builds the everyday skill of explaining your reasoning clearly. Students report that explaining aloud sharpens their own thinking, and because the reasoning is in the student&rsquo;s own voice, it gives you authentic evidence of their understanding. It also scales more readily than a full oral exam.</p>
@@ -502,14 +486,8 @@
         </div>
       </article>
 
-      <!-- Cluster: Task design vs. AI substitution -->
-      <div class="cluster-head">
-        <span class="bar" style="background:var(--c-task)"></span>
-        <div><h2>Task design that resists AI substitution</h2><span>Strategies 5, 6 &amp; 8</span></div>
-      </div>
-
       <article class="strategy" id="s5" style="--cc:var(--c-task)">
-        <div class="shead"><div class="num">5</div><h3>Design assignments that require local, personal, or course-specific context</h3></div>
+        <div class="shead"><div class="num">5</div><div class="stitle"><span class="ctag" style="--cc:var(--c-task)">Task design that resists AI substitution</span><h3>Design assignments that require local, personal, or course-specific context</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>Assignments anchored in a student&rsquo;s own context (their workplace, their community, a real case they are close to) push students to apply course ideas to a situation they actually know, which deepens learning and makes their thinking visible. That same specificity is hard to outsource: AI can produce a generic answer, but not the details of a particular workplace situation or lived experience, so it shifts AI from a substitute into a supporting tool. Read alongside Strategy 6, which draws context from inside the course.</p>
@@ -533,7 +511,7 @@
       </article>
 
       <article class="strategy" id="s6" style="--cc:var(--c-task)">
-        <div class="shead"><div class="num">6</div><h3>Personalize assignments by referencing students&rsquo; own prior work or contributions</h3></div>
+        <div class="shead"><div class="num">6</div><div class="stitle"><span class="ctag" style="--cc:var(--c-task)">Task design that resists AI substitution</span><h3>Personalize assignments by referencing students&rsquo; own prior work or contributions</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>This builds a coherent arc across the term: students see their own thinking develop over time, which strengthens intrinsic motivation and ownership of their work. Where Strategy 5 pulls context from outside the course, this pulls it from inside. A prompt that references what this student wrote earlier, or what a named classmate contributed in Week 3, is one AI can help with only if the student actively brings that course-internal material in.</p>
@@ -556,38 +534,8 @@
         </div>
       </article>
 
-      <article class="strategy" id="s8" style="--cc:var(--c-task)">
-        <div class="shead"><div class="num">8</div><h3>Design an assignment for a real audience beyond the instructor</h3></div>
-        <div class="part">
-          <span class="plabel why">Why it works</span>
-          <p>When students write for a real audience (a community, a workplace, a client, a public forum), the definition of &ldquo;good work&rdquo; becomes concrete and the stakes become meaningful. Real-audience assignments also tend to require context and voice AI cannot easily fake. As Torrey Trust frames it: &ldquo;AI can do this. Why am I asking them to do this?&rdquo; If the answer is &ldquo;because a real person needs it,&rdquo; the assignment justifies itself.</p>
-        </div>
-        <div class="part">
-          <span class="plabel how">How to do it</span>
-          <ul class="how">
-            <li>Partner with a campus or community organization: students produce something the partner will actually use.</li>
-            <li>Aim work at a specific public forum: a blog post, a policy brief, a community presentation, a portfolio piece.</li>
-            <li>Give students choice of audience: they identify the recipient and defend the fit.</li>
-          </ul>
-        </div>
-        <div class="part">
-          <span class="plabel look">Where to look</span>
-          <ul class="look">
-            <li><a href="https://www.torreytrust.com/design-projects" target="_blank" rel="noopener">Torrey Trust&rsquo;s Design Projects page</a> <span class="desc">— examples of authentic, project-based assessment designs from her courses.</span></li>
-            <li><a href="https://www.theoppositeofcheating.com/post/episode-34-torrey-trust" target="_blank" rel="noopener">Opposite of Cheating, Ep 34 — Torrey Trust</a> <span class="desc">— the framing question and how she applies it.</span></li>
-            <li><a href="https://higherai.substack.com/p/ai-and-alternative-assessment-redux" target="_blank" rel="noopener">Jason Gulya, &ldquo;AI and Alternative Assessment, Redux&rdquo;</a> <span class="desc">— what real-audience assessment looks like in AI-integrated writing courses.</span></li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Cluster: Process & feedback -->
-      <div class="cluster-head">
-        <span class="bar" style="background:var(--c-process)"></span>
-        <div><h2>Process &amp; feedback as part of the deliverable</h2><span>Strategy 7</span></div>
-      </div>
-
       <article class="strategy" id="s7" style="--cc:var(--c-process)">
-        <div class="shead"><div class="num">7</div><h3>Make how students develop their work, and respond to feedback, part of what they submit</h3></div>
+        <div class="shead"><div class="num">7</div><div class="stitle"><span class="ctag" style="--cc:var(--c-process)">Process &amp; feedback</span><h3>Make how students develop their work, and respond to feedback, part of what they submit</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>Revising work in response to feedback is one of the most reliable ways to deepen learning, and it is something a student has to do for themselves. When you ask students to show how their work developed (early drafts, the decisions they made, how they responded to your comments), the assignment centers that development rather than only the final product, and you get formative evidence to act on before the final grade. AI can produce a polished final draft in seconds; it cannot easily produce a coherent account of how a particular student got there.</p>
@@ -611,14 +559,32 @@
         </div>
       </article>
 
-      <!-- Cluster: Lane 1 controlled assurance -->
-      <div class="cluster-head">
-        <span class="bar" style="background:var(--c-assure)"></span>
-        <div><h2>Lane 1 controlled assurance</h2><span>Strategy 9</span></div>
-      </div>
+      <article class="strategy" id="s8" style="--cc:var(--c-task)">
+        <div class="shead"><div class="num">8</div><div class="stitle"><span class="ctag" style="--cc:var(--c-task)">Task design that resists AI substitution</span><h3>Design an assignment for a real audience beyond the instructor</h3></div></div>
+        <div class="part">
+          <span class="plabel why">Why it works</span>
+          <p>When students write for a real audience (a community, a workplace, a client, a public forum), the definition of &ldquo;good work&rdquo; becomes concrete and the stakes become meaningful. Real-audience assignments also tend to require context and voice AI cannot easily fake. As Torrey Trust frames it: &ldquo;AI can do this. Why am I asking them to do this?&rdquo; If the answer is &ldquo;because a real person needs it,&rdquo; the assignment justifies itself.</p>
+        </div>
+        <div class="part">
+          <span class="plabel how">How to do it</span>
+          <ul class="how">
+            <li>Partner with a campus or community organization: students produce something the partner will actually use.</li>
+            <li>Aim work at a specific public forum: a blog post, a policy brief, a community presentation, a portfolio piece.</li>
+            <li>Give students choice of audience: they identify the recipient and defend the fit.</li>
+          </ul>
+        </div>
+        <div class="part">
+          <span class="plabel look">Where to look</span>
+          <ul class="look">
+            <li><a href="https://www.torreytrust.com/design-projects" target="_blank" rel="noopener">Torrey Trust&rsquo;s Design Projects page</a> <span class="desc">— examples of authentic, project-based assessment designs from her courses.</span></li>
+            <li><a href="https://www.theoppositeofcheating.com/post/episode-34-torrey-trust" target="_blank" rel="noopener">Opposite of Cheating, Ep 34 — Torrey Trust</a> <span class="desc">— the framing question and how she applies it.</span></li>
+            <li><a href="https://higherai.substack.com/p/ai-and-alternative-assessment-redux" target="_blank" rel="noopener">Jason Gulya, &ldquo;AI and Alternative Assessment, Redux&rdquo;</a> <span class="desc">— what real-audience assessment looks like in AI-integrated writing courses.</span></li>
+          </ul>
+        </div>
+      </article>
 
       <article class="strategy" id="s9" style="--cc:var(--c-assure)">
-        <div class="shead"><div class="num">9</div><h3>Include a controlled (Lane 1) assessment where students demonstrate what they know and can do</h3></div>
+        <div class="shead"><div class="num">9</div><div class="stitle"><span class="ctag" style="--cc:var(--c-assure)">Lane 1 controlled assurance</span><h3>Include a controlled (Lane 1) assessment where students demonstrate what they know and can do</h3></div></div>
         <div class="part">
           <span class="plabel why">Why it works</span>
           <p>This comes directly from the Two-Lane model. If a course grants a credential, at least one assessment needs to happen under conditions controlled enough to assure the work reflects this student&rsquo;s own capability. Controlled does not mean AI-banned, and it does not mean in-person. It means conditions designed to give you confidence that the work reflects what the student knows and can do. Once that assurance moment exists, the rest of the course can live comfortably in the open lane where real learning and AI fluency develop.</p>
